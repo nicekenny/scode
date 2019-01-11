@@ -6,11 +6,27 @@
   <META name="Author" content="">
   <META name="Keywords" content="">
   <META name="Description" content="">
+  <script type="text/javascript" src="/js/jquery-min.js"></script>
+  <script type="text/javascript">
+
+	$(function(){
+	
+		$.post("http://123.235.134.168:81/wp/1",{},function(data){
+			$("#debug").html(data);
+		
+		});
+
+	});
+	
+
+  </script>
  </HEAD>
 
  <BODY>
   
 	<h1>Hello World!</h1>
+
+	<div id="debug">debug......</div>
 
  </BODY>
 </HTML>
