@@ -22,14 +22,14 @@
 	width: 640px;
 }
 .forum-article {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 .forum-article h2 {
 	font-size: 15px;
 	line-height: 20px;
 	font-weight: bold;
 	color: #333333;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 .forum-article .faItem {
 	margin: 0px;
@@ -80,7 +80,7 @@
 	line-height: 20px;
 	font-weight: bold;
 	color: #333333;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 .blog-article .baItem li {
 	padding-bottom: 5px;
