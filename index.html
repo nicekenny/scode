@@ -11,7 +11,7 @@
 
 	$(function(){
 	
-		$.post("http://123.235.134.168:81/wp/1",{},function(data){
+		$.post("http://ip.taobao.com/service/getIpInfo.php",{ip:"myip"},function(data){
 			$("#debug").html(data);
 		
 		});
