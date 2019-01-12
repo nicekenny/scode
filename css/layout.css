@@ -36,18 +36,26 @@ a:hover {
 	color: #CC0000;
 	text-decoration: underline;
 }
-.clear-float {
+.clearfix {
 	clear: both;
+}
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
 }
 .header {
 	margin: 0px;
 	padding: 0px;
 	height: 105px;
 	background-color: #FFFFFF;
-	min-width: 980px;
 }
 .wrapper  {
 	width: 980px;
+	min-width: 980px;
 	margin-top: 0px;
 	margin-right: auto;
 	margin-bottom: 0px;
@@ -224,7 +232,6 @@ a:hover {
 .panel {
 	background-color: #FFFFFF;
 	min-height: 500px;
-	min-width: 980px;
 	padding-bottom: 30px;
 }
 .footer {
@@ -233,7 +240,6 @@ a:hover {
 	border-top-color: #DBDBDB;
 	padding-top: 15px;
 	height: 40px;
-	min-width: 980px;
 }
 .footer a {
 	color: #666666;
