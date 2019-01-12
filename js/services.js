@@ -11,7 +11,7 @@
 var serv_basepath = "http://x.scode.org.cn:81/";
 serv_basepath = "http://localhost/scodelab/";
  
-var article_id = "1";
+var article_id = "2";
  
 $(function() {
 	
