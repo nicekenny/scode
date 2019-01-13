@@ -81,21 +81,21 @@ function showIndex(data) {
 			if(i>=list_length)
 				break;
 			var tmp_item = new_list[i];
-			new_list_left_ul.append("<li><a href=\"article.html?id="+tmp_item.id+"\" target=\"_blank\">"+tmp_item.title+"</a><em>"+tmp_item.createTime+"</em></li>");
+			new_list_left_ul.append("<li><a href=\"article.html?id="+tmp_item.id+"\" target=\"_blank\">"+tmp_item.title+"</a><em>"+dateMMdd(tmp_item.createTime)+"</em></li>");
 		}
 		var new_list_right_ul = $("#new_list_right");
 		for(var i=tmp_rows;i<list_length;i++) {
 			if(i>=list_length)
 				break;
 			var tmp_item = new_list[i];
-			new_list_right_ul.append("<li><a href=\"article.html?id="+tmp_item.id+"\" target=\"_blank\">"+tmp_item.title+"</a><em>"+tmp_item.createTime+"</em></li>");
+			new_list_right_ul.append("<li><a href=\"article.html?id="+tmp_item.id+"\" target=\"_blank\">"+tmp_item.title+"</a><em>"+dateMMdd(tmp_item.createTime)+"</em></li>");
 		}
 	}
 	if(edit_list!=undefined) {
 		var edit_list_ul = $("#edit_list");
 		for(var i=0;i<edit_list.length;i++) {
 			var tmp_item = edit_list[i];
-			edit_list_ul.append("<li><a href=\"article.html?id="+tmp_item.id+"\" target=\"_blank\">"+tmp_item.title+"</a><em>"+tmp_item.createTime+"</em></li>");
+			edit_list_ul.append("<li><a href=\"article.html?id="+tmp_item.id+"\" target=\"_blank\">"+tmp_item.title+"</a><em>"+dateMMdd(tmp_item.createTime)+"</em></li>");
 		}
 	}
 }
@@ -109,4 +109,11 @@ function showArticle(data) {
 		$("#article_content").html(article.content);
 	}
 
+}
+// 获取日期（月-日）
+function dateMMdd(time) {
+	var tmp_date = new Date(time);
+	var td_mm = tmp_date.getMonth()+1;
+	var td_dd = tmp_date.getDate();
+	return td_mm+"-"+td_dd;
 }
