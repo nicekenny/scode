@@ -75,7 +75,7 @@ function showIndex(data) {
 	var edit_list = data.edits;
 	if(new_list!=undefined) {
 		var list_length = new_list.length;
-		var tmp_rows = (list_length-1)/2+1;
+		var tmp_rows = parseInt((list_length-1)/2)+1;
 		var new_list_left_ul = $("#new_list_left");
 		for(var i=0;i<tmp_rows;i++) {
 			if(i>=list_length)
