@@ -54,6 +54,7 @@
 	overflow: hidden;
 	text-overflow:ellipsis;
 	white-space: nowrap;
+	display: block;
 }
 .article-box .item-list li a:hover {
 	color: #CC0033;
