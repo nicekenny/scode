@@ -10,6 +10,7 @@
 // 定义全局变量
 var serv_basepath = "http://x.scode.org.cn:81/";
 // serv_basepath = "http://localhost/scodelab/";
+serv_basepath = "https://x.scode.org.cn/";
  
 var article_id = "2";
  
