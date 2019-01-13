@@ -27,7 +27,7 @@ $(function() {
 	});
 			
 });
- 
+// Article回调函数
 function showArticle(data) {
 
 	var article = data.article;
@@ -36,5 +36,5 @@ function showArticle(data) {
 		$("#article_title").html(article.title);
 		$("#article_content").html(article.content);
 	}
-	
-};
+
+}
