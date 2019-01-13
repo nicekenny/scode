@@ -8,12 +8,22 @@
  */
 
 // 定义全局变量
+var basepath = "https://scode.org.cn/";
 var serv_basepath = "http://x.scode.org.cn:81/";
 // serv_basepath = "http://localhost/scodelab/";
 serv_basepath = "https://x.scode.org.cn:444/";
 
 // 页面数据初始化
 $(function() {
+	
+	$("a[scl='scode']").each(function(){
+		var tmp_href = $(this).attr("href");
+		$(this).attr("href", basepath + tmp_href);
+	});
+	$("a[scl='x_scode']").each(function(){
+		var tmp_href = $(this).attr("href");
+		$(this).attr("href", serv_basepath + tmp_href);
+	});
 	
 	var pathname = window.location.pathname;
 	// alert(pathname);
