@@ -64,10 +64,11 @@
 	font-style: normal;
 	color: #999999;
 	height: 20px;
-	width: 50px;
+	width: 40px;
 	position: absolute;
 	top: 5px;
 	right: 0px;
+	text-align: right;
 }
 .article-box ._left {
 	float: left;
