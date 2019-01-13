@@ -74,9 +74,6 @@ function showIndex(data) {
 	var new_list = data.news;
 	var edit_list = data.edits;
 	if(new_list!=undefined) {
-		// var result = JSON.stringify(article.content);
-		//$("#article_title").html(article.title);
-		//$("#article_content").html(article.content);
 		var list_length = new_list.length;
 		var tmp_rows = (list_length-1)/2+1;
 		var new_list_left_ul = $("#new_list_left");
@@ -95,9 +92,6 @@ function showIndex(data) {
 		}
 	}
 	if(edit_list!=undefined) {
-		// var result = JSON.stringify(article.content);
-		//$("#article_title").html(article.title);
-		//$("#article_content").html(article.content);
 		var edit_list_ul = $("#edit_list");
 		for(var i=0;i<edit_list.length;i++) {
 			var tmp_item = edit_list[i];
