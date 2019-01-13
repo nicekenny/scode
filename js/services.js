@@ -16,7 +16,7 @@ serv_basepath = "https://x.scode.org.cn:444/";
 $(function() {
 	
 	var pathname = window.location.pathname;
-	alert(pathname);
+	// alert(pathname);
 	if(pathname=="/"||pathname=="/index.html") {
 		loadIndex();
 	} else if(pathname=="/article.html") {
