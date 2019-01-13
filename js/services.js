@@ -77,11 +77,32 @@ function showIndex(data) {
 		// var result = JSON.stringify(article.content);
 		//$("#article_title").html(article.title);
 		//$("#article_content").html(article.content);
+		var list_length = new_list.length;
+		var tmp_rows = (list_length-1)/2+1;
+		var new_list_left_ul = $("#new_list_left");
+		for(var i=0;i<tmp_rows;i++) {
+			if(i>=list_length)
+				break;
+			var tmp_item = new_list[i];
+			new_list_left_ul.appendHtml("<li><a href=\"article.html?id="+tmp_item.id+"\" target=\"_blank\">"+tmp_item.title+"</a><em>"+tmp_item.createTime+"</em></li>");
+		}
+		var new_list_right_ul = $("#new_list_right");
+		for(var i=tmp_rows;i<list_length;i++) {
+			if(i>=list_length)
+				break;
+			var tmp_item = new_list[i];
+			new_list_right_ul.appendHtml("<li><a href=\"article.html?id="+tmp_item.id+"\" target=\"_blank\">"+tmp_item.title+"</a><em>"+tmp_item.createTime+"</em></li>");
+		}
 	}
 	if(edit_list!=undefined) {
 		// var result = JSON.stringify(article.content);
 		//$("#article_title").html(article.title);
 		//$("#article_content").html(article.content);
+		var edit_list_ul = $("#edit_list");
+		for(var i=0;i<edit_list.length;i++) {
+			var tmp_item = edit_list[i];
+			edit_list_ul.appendHtml("<li><a href=\"article.html?id="+tmp_item.id+"\" target=\"_blank\">"+tmp_item.title+"</a><em>"+tmp_item.createTime+"</em></li>");
+		}
 	}
 }
 // Article回调函数
