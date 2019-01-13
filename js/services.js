@@ -27,7 +27,7 @@ $(function() {
 	
 	var pathname = window.location.pathname;
 	// alert(pathname);
-	if(pathname=="/"||pathname=="/index.html") {
+	if(pathname=="" || pathname=="/" || pathname=="/index.html") {
 		loadIndex();
 	} else if(pathname=="/article.html") {
 		loadArticle();
