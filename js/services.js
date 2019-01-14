@@ -111,7 +111,10 @@ function showArticle(data) {
 		$("meta[name='description']").eq(0).attr("content",article.description);
 
 		$("#article_title").html(article.title);
+		
+		$("article_author").html(data.author);
 		$("#article_time").html(dateYmdhm(article.createTime));
+		
 		$("#article_content").html(article.content);
 
 		
