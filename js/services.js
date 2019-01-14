@@ -124,7 +124,7 @@ function dateYmdhm(time) {
 	var td_yyyy = tmp_date.getFullYear();
 	var td_mm = tmp_date.getMonth()+1;
 	var td_dd = tmp_date.getDate();
-	var td_hh = zeroize(tmp_date.getHours());
-	var td_ms = zeroize(tmp_date.getMinutes());
+	var td_hh = tmp_date.getHours();
+	var td_ms = tmp_date.getMinutes();
 	return td_yyyy+"-"+td_mm+"-"+td_dd+" "+td_hh+":"+td_ms;
 }
