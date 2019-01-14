@@ -112,7 +112,7 @@ function showArticle(data) {
 
 		$("#article_title").html(article.title);
 		
-		$("article_author").html(data.author);
+		$("#article_author").html(data.author);
 		$("#article_time").html(dateYmdhm(article.createTime));
 		
 		$("#article_content").html(article.content);
