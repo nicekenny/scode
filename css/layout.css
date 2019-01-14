@@ -200,8 +200,19 @@ a:hover {
 	padding-right: 3px;
 	padding-bottom: 0px;
 	padding-left: 3px;
-	border: 1px solid #DBDBDB;
 	border-radius: 5px 0px 0px 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #DBDBDB;
+	border-right-color: #EEEEEE;
+	border-bottom-color: #DBDBDB;
+	border-left-color: #DBDBDB;
 }
 .search-box .sb-button {
 	background-color: #FFFFFF;
