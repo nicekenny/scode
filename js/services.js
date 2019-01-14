@@ -106,6 +106,7 @@ function showArticle(data) {
 	if(article!=undefined) {
 		// var result = JSON.stringify(article.content);
 		$("#article_title").html(article.title);
+		$("#article_time").html(dateYmdhm(article.createTime));
 		$("#article_content").html(article.content);
 	}
 
@@ -116,4 +117,14 @@ function dateMMdd(time) {
 	var td_mm = tmp_date.getMonth()+1;
 	var td_dd = tmp_date.getDate();
 	return td_mm+"-"+td_dd;
+}
+// 获取日期（年-月-日 时:分）
+function dateYmdhm(time) {
+	var tmp_date = new Date(time);
+	var td_yyyy = tmp_date.getFullYear();
+	var td_mm = tmp_date.getMonth()+1;
+	var td_dd = tmp_date.getDate();
+	var td_hh = zeroize(tmp_date.getHours());
+	var td_ms = zeroize(tmp_date.getMinutes());
+	return td_yyyy+"-"+td_mm+"-"+td_dd+" "+td_hh+":"+td_ms;
 }
