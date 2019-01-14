@@ -105,9 +105,14 @@ function showArticle(data) {
 	var article = data.article;
 	if(article!=undefined) {
 		// var result = JSON.stringify(article.content);
+		// html - title
+		$(document).attr("title",article.title + " - scode.org.cn");
+
 		$("#article_title").html(article.title);
 		$("#article_time").html(dateYmdhm(article.createTime));
 		$("#article_content").html(article.content);
+
+		
 	}
 
 }
