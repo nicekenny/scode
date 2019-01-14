@@ -201,6 +201,7 @@ a:hover {
 	padding-bottom: 0px;
 	padding-left: 3px;
 	border: 1px solid #DBDBDB;
+	border-radius: 5px 0px 0px 5px;
 }
 .search-box .sb-button {
 	background-color: #FFFFFF;
@@ -225,6 +226,7 @@ a:hover {
 	border-bottom-color: #DBDBDB;
 	margin: 0px;
 	padding: 0px;
+	border-radius: 0px 5px 5px 0px;
 }
 .search-box .sb-button:active {
 	background-color: #EFEFEF;
