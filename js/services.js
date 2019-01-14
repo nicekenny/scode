@@ -107,6 +107,8 @@ function showArticle(data) {
 		// var result = JSON.stringify(article.content);
 		// html - title
 		$(document).attr("title",article.title + " - scode.org.cn");
+		$("meta[name='keywords']").eq(0).attr("content",article.keywords);
+		$("meta[name='description']").eq(0).attr("content",article.description);
 
 		$("#article_title").html(article.title);
 		$("#article_time").html(dateYmdhm(article.createTime));
