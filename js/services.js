@@ -147,9 +147,27 @@ function showGoods(data) {
 				+"<p class=\"title\"><a href=\""+item.clickUrl+"\" target=\"_blank\">"+item.title+"</a></p>"
 				//+"<div class=\"coupon\"><span class=\"cp_title\">满19元减10元</span><a href=\"\" target=\"_blank\" class=\"cp_link\">去领券</a></div>"
 				+"<div class=\"goods_info\"><b class=\"price_info\"><i>￥</i>"+item.zkFinalPrice+"</b><span class=\"fav_num\">"+item.volume+"</span></div></li>";
+
 			$("#goods_list").append(item_li);
 		}
 	}
+	var categorys = data.categorys;
+	if(categorys!=undefined) {
+		for(var i=0;i<categorys.length;i++) {
+			var category = categorys[i];
+
+			var category_li = "<a href=\""+basepath+"goods.html?cate="+category.favoritesId;
+			if(category.favoritesId == data.currentCategoryId) {
+				category_li = category_li + "\" class=\"current\">";
+			} else {
+				category_li = category_li + "\" >";
+			}
+			category_li = category_li + category.favoritesTitle+"</a>";
+
+			$("#category_list").append(category_li);
+		}
+	}
+	
 }
 // 获取日期（月-日）
 function dateMMdd(time) {
