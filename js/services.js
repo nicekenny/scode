@@ -160,6 +160,7 @@ function showGoods(data) {
 
 			$("#goods_list").append(item_li);
 		}
+		// 全局页码翻页
 		page_no = page_no + 1;
 	}
 	var categorys = data.categorys;
