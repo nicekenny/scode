@@ -118,7 +118,7 @@
 	border-radius: 3px;
 }
 .cate_g_items .cgi:hover {
-	box-shadow: 0px 1px 8px #999999;
+	box-shadow: 0px 1px 8px #CCCCCC;
 }
 .cate_g_items .cgi .img {
 	display: block;
