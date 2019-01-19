@@ -64,9 +64,9 @@ function loadArticle() {
 }
 // goods.html页面数据加载
 function loadGoods() {
-	var article_id = getQueryString("id");
+	var categoryId = getQueryString("cate");
 	$.ajax({
-		url: serv_basepath + "taobao/item/ajaxItems.html",
+		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId,
 		type: 'GET',
 		dataType: "jsonp",
 		jsonpCallback: "showGoods",
