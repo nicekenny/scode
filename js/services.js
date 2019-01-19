@@ -40,7 +40,6 @@ $(function() {
 			var items_box = $("#goods_list");
 			var window_top = $(window).scrollTop();
 			if(window_top>(items_box.offset().top+items_box.height()-200)) {
-				page_no = page_no + 1;
 				loadGoods();
 			}
 		});
@@ -161,6 +160,7 @@ function showGoods(data) {
 
 			$("#goods_list").append(item_li);
 		}
+		page_no = page_no + 1;
 	}
 	var categorys = data.categorys;
 	if(categorys!=undefined) {
