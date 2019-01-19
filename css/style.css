@@ -118,7 +118,7 @@
 	border-radius: 3px;
 }
 .cate_g_items .cgi:hover {
-	box-shadow: 0px 1px 8px #CCCCCC;
+	box-shadow: 0px 1px 8px #BBBBBB;
 }
 .cate_g_items .cgi .img {
 	display: block;
@@ -170,6 +170,9 @@
 .cate_g_items .cgi .title a:hover {
 	color: #333333;
 	text-decoration: none;
+}
+.cate_g_items .cgi:hover .title a {
+	color: #333333;
 }
 .cate_g_items .cgi .coupon {
 	padding-right: 10px;
