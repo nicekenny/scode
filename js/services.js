@@ -39,6 +39,7 @@ $(function() {
 		$(window).scroll(function() {
 			var items_box = $("#goods_list");
 			var window_top = $(window).scrollTop();
+			$("#debug_link").html("debug:"+window_top+" > "+(items_box.offset().top+items_box.height()));
 			if(window_top>(items_box.offset().top+items_box.height())) {
 				loadGoods();
 			}
