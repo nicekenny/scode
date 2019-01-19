@@ -143,9 +143,9 @@ function showGoods(data) {
 		for(var i=0;i<items.length;i++) {
 			var item = items[i];
 
-			var item_li = "<li class=\"cgi\"><a href=\""+item.clickUrl+"\" class=\"img_square\"><img src=\""+item.pictUrl+"\"></a>"
-				+"<p class=\"title\"><a href=\""+item.clickUrl+"\">"+item.title+"</a></p>"
-				//+"<div class=\"coupon\"><span class=\"cp_title\">满19元减10元</span><a href=\"\" class=\"cp_link\">去领券</a></div>"
+			var item_li = "<li class=\"cgi\"><a href=\""+item.clickUrl+"\" target=\"_blank\" class=\"img_square\"><img src=\""+item.pictUrl+"\"></a>"
+				+"<p class=\"title\"><a href=\""+item.clickUrl+"\" target=\"_blank\">"+item.title+"</a></p>"
+				//+"<div class=\"coupon\"><span class=\"cp_title\">满19元减10元</span><a href=\"\" target=\"_blank\" class=\"cp_link\">去领券</a></div>"
 				+"<div class=\"goods_info\"><b class=\"price_info\"><i>￥</i>"+item.zkFinalPrice+"</b><span class=\"fav_num\">"+item.volume+"</span></div></li>";
 			$("#goods_list").append(item_li);
 		}
