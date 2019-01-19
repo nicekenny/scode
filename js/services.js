@@ -12,6 +12,8 @@ var basepath = "https://scode.org.cn/";
 var serv_basepath = "http://x.scode.org.cn:81/";
 // serv_basepath = "http://localhost/scodelab/";
 serv_basepath = "https://x.scode.org.cn:444/";
+// 初始化页码
+var page_no = 1;
 
 // 页面数据初始化
 $(function() {
@@ -33,6 +35,15 @@ $(function() {
 		loadArticle();
 	} else if(pathname=="/goods.html") {
 		loadGoods();
+		// 滚动条加载商品数据
+		$(window).scroll(function() {
+			var items_box = $("#goods_list");
+			var window_top = $(window).scrollTop();
+			if(window_top>(items_box.offset().top+items_box.height()-200)) {
+				page_no = page_no + 1;
+				loadGoods();
+			}
+		});
 	}
 	
 
@@ -66,7 +77,7 @@ function loadArticle() {
 function loadGoods() {
 	var categoryId = getQueryString("cate");
 	$.ajax({
-		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId,
+		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId+"&page="+page_no,
 		type: 'GET',
 		dataType: "jsonp",
 		jsonpCallback: "showGoods",
