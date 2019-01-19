@@ -156,7 +156,7 @@ function showArticle(data) {
 function showGoods(data) {
 	var current_category = data.currentCategory;
 	if(current_category!=undefined) {
-		$(document).attr("title", current_category.favoritesTitle + " - Shopping - scode.org.cn");
+		$(document).attr("title", current_category + " - Shopping - scode.org.cn");
 	}
 	var items = data.items;
 	if(items!=undefined) {
