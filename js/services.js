@@ -169,20 +169,22 @@ function showGoods(data) {
 		// 全局页码翻页
 		page_no = page_no + 1;
 	}
-	var categorys = data.categorys;
-	if(categorys!=undefined) {
-		for(var i=0;i<categorys.length;i++) {
-			var category = categorys[i];
+	if(current_page_no<=1) {
+		var categorys = data.categorys;
+		if(categorys!=undefined) {
+			for(var i=0;i<categorys.length;i++) {
+				var category = categorys[i];
 
-			var category_li = "<a href=\""+basepath+"goods.html?cate="+category.favoritesId;
-			if(category.favoritesId == data.currentCategoryId) {
-				category_li = category_li + "\" class=\"current\">";
-			} else {
-				category_li = category_li + "\" >";
+				var category_li = "<a href=\""+basepath+"goods.html?cate="+category.favoritesId;
+				if(category.favoritesId == data.currentCategoryId) {
+					category_li = category_li + "\" class=\"current\">";
+				} else {
+					category_li = category_li + "\" >";
+				}
+				category_li = category_li + category.favoritesTitle+"</a>";
+
+				$("#category_list").append(category_li);
 			}
-			category_li = category_li + category.favoritesTitle+"</a>";
-
-			$("#category_list").append(category_li);
 		}
 	}
 	
