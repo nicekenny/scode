@@ -31,6 +31,8 @@ $(function() {
 		loadIndex();
 	} else if(pathname=="/article.html") {
 		loadArticle();
+	} else if(pathname=="/goods.html") {
+		loadGoods();
 	}
 	
 
@@ -55,6 +57,19 @@ function loadArticle() {
 		type: 'GET',
 		dataType: "jsonp",
 		jsonpCallback: "showArticle",
+		success: function (data) {
+			//console.info("success");
+		}
+	});
+}
+// goods.html页面数据加载
+function loadGoods() {
+	var article_id = getQueryString("id");
+	$.ajax({
+		url: serv_basepath + "taobao/item/ajaxItems.html",
+		type: 'GET',
+		dataType: "jsonp",
+		jsonpCallback: "showGoods",
 		success: function (data) {
 			//console.info("success");
 		}
@@ -120,6 +135,21 @@ function showArticle(data) {
 		
 	}
 
+}
+// Goods回调函数
+function showGoods(data) {
+	var items = data.items;
+	if(items!=undefined) {
+		for(var i=0;i<items.length;i++) {
+			var item = items[i];
+
+			var item_li = "<li class=\"cgi\"><a href=\""+item.clickUrl+"\" class=\"img_square\"><img src=\""+item.pictUrl+"\"></a>"
+				+"<p class=\"title\"><a href=\""+item.clickUrl+"\">"+item.title+"</a></p>"
+				//+"<div class=\"coupon\"><span class=\"cp_title\">满19元减10元</span><a href=\"\" class=\"cp_link\">去领券</a></div>"
+				+"<div class=\"goods_info\"><b class=\"price_info\"><i>￥</i>"+item.zkFinalPrice+"</b><span class=\"fav_num\">"+item.volume+"</span></div></li>";
+			$("#goods_list").append(item_li);
+		}
+	}
 }
 // 获取日期（月-日）
 function dateMMdd(time) {
