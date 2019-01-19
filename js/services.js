@@ -76,6 +76,9 @@ function loadArticle() {
 function loadGoods() {
 	if(page_no<=current_page_no)
 		return;
+	// 设置当前页码
+	current_page_no = page_no;
+
 	var categoryId = getQueryString("cate");
 	$.ajax({
 		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId+"&page="+page_no,
@@ -150,6 +153,7 @@ function showArticle(data) {
 }
 // Goods回调函数
 function showGoods(data) {
+	
 	var items = data.items;
 	if(items!=undefined) {
 		for(var i=0;i<items.length;i++) {
@@ -163,7 +167,6 @@ function showGoods(data) {
 			$("#goods_list").append(item_li);
 		}
 		// 全局页码翻页
-		current_page_no = page_no;
 		page_no = page_no + 1;
 	}
 	var categorys = data.categorys;
