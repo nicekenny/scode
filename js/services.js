@@ -39,8 +39,8 @@ $(function() {
 		$(window).scroll(function() {
 			var items_box = $(".category_group");
 			var window_top = $(window).scrollTop();
-			$("#debug_link").html("debug:"+window_top+" > "+(items_box.offset().top+items_box.height()-800));
-			if(window_top>(items_box.offset().top+items_box.height()-800)) {
+			
+			if(window_top>(items_box.offset().top+items_box.height()-1000)) {
 				loadGoods();
 			}
 		});
