@@ -165,10 +165,10 @@
 	font-size: 13px;
 	line-height: 20px;
 	text-decoration: none;
-	color: #333333;
+	color: #999999;
 }
 .cate_g_items .cgi .title a:hover {
-	color: #ff2c35;
+	color: #333333;
 	text-decoration: none;
 }
 .cate_g_items .cgi .coupon {
@@ -210,7 +210,7 @@
 .cate_g_items .cgi .goods_info .price_info {
 	font-size: 20px;
 	line-height: 30px;
-	color: #ff2c35;
+	color: #333333;
 	font-weight: 400;
 }
 .cate_g_items .cgi .goods_info .price_info i {
@@ -218,7 +218,7 @@
 	font-size: 16px;
 	line-height: 30px;
 	font-weight: lighter;
-	color: #ff2c35;
+	color: #333333;
 }
 .cate_g_items .cgi .goods_info .fav_num {
 	background-image: url(images/category_nav_icons.png);
