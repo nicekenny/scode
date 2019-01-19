@@ -13,7 +13,7 @@ var serv_basepath = "http://x.scode.org.cn:81/";
 // serv_basepath = "http://localhost/scodelab/";
 serv_basepath = "https://x.scode.org.cn:444/";
 // 初始化页码
-var page_no = 1;
+var page_no = 1,current_page_no = 0;
 
 // 页面数据初始化
 $(function() {
@@ -74,6 +74,8 @@ function loadArticle() {
 }
 // goods.html页面数据加载
 function loadGoods() {
+	if(page_no<=current_page_no)
+		return;
 	var categoryId = getQueryString("cate");
 	$.ajax({
 		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId+"&page="+page_no,
@@ -161,6 +163,7 @@ function showGoods(data) {
 			$("#goods_list").append(item_li);
 		}
 		// 全局页码翻页
+		current_page_no = page_no;
 		page_no = page_no + 1;
 	}
 	var categorys = data.categorys;
