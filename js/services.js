@@ -154,7 +154,10 @@ function showArticle(data) {
 }
 // Goods回调函数
 function showGoods(data) {
-	
+	var current_category = data.currentCategory;
+	if(current_category!=undefined) {
+		$(document).attr("title", current_category.favoritesTitle + " - Shopping - scode.org.cn");
+	}
 	var items = data.items;
 	if(items!=undefined) {
 		for(var i=0;i<items.length;i++) {
