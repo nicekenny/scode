@@ -115,6 +115,7 @@
 	overflow: hidden;
 	background-color: #FFFFFF;
 	box-shadow: 0 5px 8px #F3F3F3;
+	border-radius: 3px;
 }
 .cate_g_items .cgi .img {
 	display: block;
