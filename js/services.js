@@ -39,7 +39,7 @@ $(function() {
 		$(window).scroll(function() {
 			var items_box = $("#goods_list");
 			var window_top = $(window).scrollTop();
-			if(window_top>(items_box.offset().top+items_box.height()-200)) {
+			if(window_top>(items_box.offset().top+items_box.height())) {
 				loadGoods();
 			}
 		});
