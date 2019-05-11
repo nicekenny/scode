@@ -238,9 +238,6 @@
 }
 .category_box {
 	margin-bottom: 20px;
-	border-bottom-width: 2px;
-	border-bottom-style: solid;
-	border-bottom-color: #EEEEEE;
 	padding-bottom: 8px;
 }
 .category_box a {
@@ -250,8 +247,16 @@
 	margin-right: 10px;
 	text-decoration: none;
 	color: #666666;
+	background-color: #EEEEEE;
+	border-radius: 15px;
+	padding-right: 12px;
+	padding-left: 12px;
+}
+.category_box a:hover {
+	color: #333333;
 }
 .category_box a.current {
 	font-weight: bold;
-	color: #333333;
+	color: #FFFFFF;
+	background-color: #333333;
 }
