@@ -34,7 +34,7 @@ a {
 }
 a:hover {
 	color: #13a4fe;
-	text-decoration: none;
+	/*text-decoration: none;*/
 }
 .clearfix {
 	clear: both;
