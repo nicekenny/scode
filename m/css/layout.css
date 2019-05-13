@@ -396,7 +396,7 @@ a:hover {
 .tao_pwd .tpwd_links .tpwd_buylink {
 	background-color: #CC3333;
 	display: inline-block;
-	width: 48%;
+	width: 47%;
 	float: right;
 }
 .tao_pwd .tpwd_links .tpwd_close {
@@ -405,5 +405,5 @@ a:hover {
 .tao_pwd .tpwd_links .tpwd_qrcode {
 	background-color: #FF6600;
 	display: inline-block;
-	width: 48%;
+	width: 47%;
 }
