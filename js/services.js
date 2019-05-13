@@ -306,14 +306,14 @@ function doBuy(a) {
 		+"<a class=\"tpwd_close\">再逛逛</a>"
 		+"</div></div>";
 
-	var dialog = new dialogLayer();
-	var dgContent = dialog.open("淘口令",250,300);
+	var tpwd_dialog = new dialogLayer();
+	var tpwd_dgContent = dialog.open("淘口令",250,300);
 
-	$(dgContent).html(tpwd_html);
-	$(taskDialog.getDialog()).fadeIn(500);
+	$(tpwd_dgContent).html(tpwd_html);
+	$(tpwd_dialog.getDialog()).fadeIn(500);
 
-	$(dgContent).find(".tpwd_close").click(function() {
-		dialog.close();
+	$(tpwd_dgContent).find(".tpwd_close").click(function() {
+		tpwd_dialog.close();
 	});
 }
 // 获取日期（月-日）
