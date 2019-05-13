@@ -296,7 +296,8 @@ function show_m_guang(data) {
 // 去购买（淘口令）
 function doBuy(a) {
 	var click_url = $(a).attr("click_url");
-	var content = dialogLayer.open("淘口令",150,250);
+	var dialog = new dialogLayer();
+	var content = dialog.open("淘口令",150,250);
 
 }
 // 获取日期（月-日）
