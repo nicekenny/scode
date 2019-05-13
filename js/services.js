@@ -309,20 +309,34 @@ function doBuy(a) {
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
 		+"<div class=\"tpwd_content\"><p>"+title+"</p><p style=\"color:#0099CC;\">淘口令：&nbsp;"+tpwd+"</p><p>优惠价：&nbsp;"+price+"元</p></div>"
-		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买<img src=\"http://qr.liantu.com/api.php?bg=f3f3f3&fg=ff0000&gc=222222&el=l&w=200&m=10&text="+buyUrl+"\"/></div>"
+		+"<div class=\".item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=f3f3f3&fg=ff0000&gc=222222&el=l&w=200&m=10&text="+buyUrl+"\"/></div>"
+		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
+		+"<a class=\"tpwd_qrcode\">二维码</a>"
 		+"<a href=\""+buyUrl+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
 		+"<a class=\"tpwd_close\">再逛逛</a>"
 		+"</div></div>";
 
 	var tpwd_dialog = new dialogLayer();
-	var tpwd_dgContent = tpwd_dialog.open("淘口令，快速淘好货！",250,320);
+	var tpwd_dgContent = tpwd_dialog.open("淘口令/二维码，快速淘好货！",250,320);
 
 	$(tpwd_dgContent).html(tpwd_html);
 	$(tpwd_dialog.getDialog()).fadeIn(500);
 
 	$(tpwd_dgContent).find(".tpwd_close").click(function() {
 		tpwd_dialog.close();
+	});
+	$(tpwd_dgContent).find(".tpwd_qrcode").click(function() {
+		var tmp_link = $(this);
+		if(tmp_link.text()=="二维码") {
+			$(tpwd_dgContent).find(".tpwd_content").hide();
+			$(tpwd_dgContent).find(".item_qrcode").show();
+			tmp_link.text("淘口令");
+		} else {
+			$(tpwd_dgContent).find(".item_qrcode").hide();
+			$(tpwd_dgContent).find(".tpwd_content").show();
+			tmp_link.text("二维码");
+		}
 	});
 }
 // 获取日期（月-日）
