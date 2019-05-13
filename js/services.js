@@ -301,7 +301,7 @@ function doBuy(a) {
 	var price = $(a).attr("price");
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
-		+"<div class=\"tpwd_content\">淘口令:[ "+tpwd+" ]<br/>优惠价："+price+"元<br/>"+title+"</div>"
+		+"<div class=\"tpwd_content\">淘口令&nbsp;&nbsp;"+tpwd+"<br/>优惠价："+price+"元<br/>"+title+"</div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开天猫/淘宝APP购买</div>"
 		+"<div class=\"tpwd_links\">"
 		+"<a href=\""+click_url+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
@@ -309,7 +309,7 @@ function doBuy(a) {
 		+"</div></div>";
 
 	var tpwd_dialog = new dialogLayer();
-	var tpwd_dgContent = tpwd_dialog.open("淘口令，淘货助手！",250,300);
+	var tpwd_dgContent = tpwd_dialog.open("淘口令，淘货助手！",250,320);
 
 	$(tpwd_dgContent).html(tpwd_html);
 	$(tpwd_dialog.getDialog()).fadeIn(500);
