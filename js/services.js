@@ -236,7 +236,7 @@ function show_m_guang(data) {
 		for(var i=0;i<items.length;i++) {
 			var item = items[i];
 
-			var item_li = "<li class=\"wall_item\">"+"<a href=\""+item.clickUrl+"\">"
+			var item_li = "<li class=\"wall_item\">"+"<a href=\""+item.clickUrl+"\" target=\"_blank\">"
 				+"<div class=\"item_img\">"+"<img src=\""+item.pictUrl+"_250x250q90.jpg\" alt=\""+item.title+"\" />"
 				+"</div><div class=\"item_title\">"+item.title+"</div>"+"<div class=\"item_info\">"
 				+"<span class=\"item_info_price\"><i>¥</i>"+item.zkFinalPrice+"</span>"
