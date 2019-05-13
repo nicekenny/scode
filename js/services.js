@@ -300,7 +300,7 @@ function doBuy(a) {
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
 		+"<div class=\"tpwd_content\">淘口令:"+tpwd+"</div>"
-		+"<div class=\"tpwd_info\">复制淘口令，打开淘宝APP购买</div>"
+		+"<div class=\"tpwd_info\">复制淘口令，打开天猫/淘宝APP购买</div>"
 		+"<div class=\"tpwd_links\">"
 		+"<a href=\""+click_url+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
 		+"<a class=\"tpwd_close\">再逛逛</a>"
