@@ -323,7 +323,7 @@ function doBuy(a) {
 		userType_txt = "天猫/淘宝";
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
-		+"<div class=\"tpwd_content\"><p>"+title+"</p><p style=\"color:#0099CC;\">淘口令：&nbsp;<span info=\"tpwd\">"+tpwd+"</span></p><p>优惠价：&nbsp;"+price+"元</p></div>"
+		+"<div class=\"tpwd_content\"><p>"+title+"</p><p style=\"color:#0099CC;\">淘口令：&nbsp;<span info=\"tpwd\">Loading...</span></p><p>优惠价：&nbsp;"+price+"元</p></div>"
 		+"<div class=\"item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=f3f3f3&fg=ff0000&gc=222222&el=l&w=200&m=10&text="+buyUrl+"\" style=\"width:160px;height:160px;\"/></div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
