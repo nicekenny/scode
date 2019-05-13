@@ -228,7 +228,8 @@ a:hover {
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 5px;
-	border: 1px solid #e1e4e5;
+	border-radius: 5px;
+	overflow: hidden;
 }
 .wall_item .item_img {
 	background-color: #FFFFFF;
@@ -337,24 +338,21 @@ a:hover {
 	margin-bottom: 10px;
 }
 .footer {
-	background-color: #EFEFEF;
+	background-color: #666666;
 	border-top-width: 1px;
 	border-top-style: solid;
 	border-top-color: #DCDCDC;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	text-align: center;
 }
+.footer a{
+	color: #FFFFFF;
+}
 .footer .copyright {
-	color: #666666;
+	color: #FFFFFF;
 }
-.footer .device_links {
-	color: #999999;
-}
-.footer .device_links a {
-	margin-right: 3px;
-	margin-left: 3px;
-}
+
 .fixed_box {
 	position: fixed;
 	right: 10px;
