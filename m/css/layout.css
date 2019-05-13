@@ -397,7 +397,6 @@ a:hover {
 	background-color: #CC3333;
 	display: inline-block;
 	width: 47%;
-	float: right;
 }
 .tao_pwd .tpwd_links .tpwd_close {
 	background-color: #99CC33;
@@ -406,4 +405,5 @@ a:hover {
 	background-color: #FF6600;
 	display: inline-block;
 	width: 47%;
+	float: right;
 }
