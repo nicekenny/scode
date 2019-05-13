@@ -371,9 +371,10 @@ a:hover {
 	overflow: hidden;
 }
 .tao_pwd .item_qrcode {
-	height: 120px;
+	height: 160px;
 	width: 200px;
 	text-align: center;
+	margin-bottom: 15px;
 }
 
 .tao_pwd .tpwd_info {
