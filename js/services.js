@@ -309,7 +309,7 @@ function doBuy(a) {
 		+"</div></div>";
 
 	var tpwd_dialog = new dialogLayer();
-	var tpwd_dgContent = tpwd_dialog.open("淘口令，淘货助手！",250,320);
+	var tpwd_dgContent = tpwd_dialog.open("淘口令，快速淘好货！",250,320);
 
 	$(tpwd_dgContent).html(tpwd_html);
 	$(tpwd_dialog.getDialog()).fadeIn(500);
