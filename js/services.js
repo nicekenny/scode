@@ -309,7 +309,7 @@ function doBuy(a) {
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
 		+"<div class=\"tpwd_content\"><p>"+title+"</p><p style=\"color:#0099CC;\">淘口令：&nbsp;"+tpwd+"</p><p>优惠价：&nbsp;"+price+"元</p></div>"
-		+"<div class=\".item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=f3f3f3&fg=ff0000&gc=222222&el=l&w=200&m=10&text="+buyUrl+"\"/></div>"
+		+"<div class=\"item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=f3f3f3&fg=ff0000&gc=222222&el=l&w=200&m=10&text="+buyUrl+"\"/></div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
 		+"<a class=\"tpwd_qrcode\">二维码</a>"
@@ -318,7 +318,7 @@ function doBuy(a) {
 		+"</div></div>";
 
 	var tpwd_dialog = new dialogLayer();
-	var tpwd_dgContent = tpwd_dialog.open("淘口令/二维码，快速淘好货！",250,320);
+	var tpwd_dgContent = tpwd_dialog.open("淘口令/二维码，快速淘好货！",250,360);
 
 	$(tpwd_dgContent).html(tpwd_html);
 	$(tpwd_dialog.getDialog()).fadeIn(500);
