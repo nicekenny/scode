@@ -365,14 +365,15 @@ a:hover {
 .tao_pwd .tpwd_content {
 	border: 1px dashed #999999;
 	padding: 5px;
-	height: 200px;
+	height: 120px;
 	font-size: 14px;
 	line-height: 20px;
 	overflow: hidden;
 }
 .tao_pwd .item_qrcode {
-	height: 200px;
+	height: 120px;
 	width: 200px;
+	text-align: center;
 }
 
 .tao_pwd .tpwd_info {
