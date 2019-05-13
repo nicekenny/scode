@@ -308,7 +308,7 @@ function doBuy(a) {
 		userType_txt = "天猫";
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
-		+"<div class=\"tpwd_content\">"+title+"<br/>淘口令：&nbsp;<b>"+tpwd+"</b><br/>优惠价：&nbsp;"+price+"元</div>"
+		+"<div class=\"tpwd_content\"><p>"+title+"</p><p style=\"color:#d52f37;\">淘口令：&nbsp;<b>"+tpwd+"</b></p><p>优惠价：&nbsp;"+price+"元</p></div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
 		+"<a href=\""+click_url+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
