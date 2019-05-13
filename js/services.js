@@ -241,7 +241,8 @@ function show_m_guang(data) {
 				+"</div><div class=\"item_title\">"+item.title+"</div>"+"<div class=\"item_info\">"
 				+"<span class=\"item_info_price\"><i>¥</i>"+item.zkFinalPrice+"</span>"
 				+"<span class=\"item_info_delprice\">¥"+item.reservePrice+"</span>"
-				+"<span class=\"item_info_provcity\">"+item.provcity+"</span>"
+				+"<span class=\"item_info_likes\">"+item.volume+"</span>"
+				//+"<span class=\"item_info_provcity\">"+item.provcity+"</span>"
 				+"</div></a></li>";
 
 
