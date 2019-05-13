@@ -311,14 +311,11 @@ function doBuy(a) {
 		url: serv_basepath + "taobao/item/ajaxItemTpwd.html?id="+itemId+"&url="+encodeURIComponent(buyUrl),
 		type: 'GET',
 		dataType: "jsonp",
-		jsonpCallback: "callback_m_guang_tpwd",
 		success: function (data) {
-			alert("callback:"+data);
+			$(tpwd_dgContent).find("span[info='tpwd']").html(data);
 		}
 	});
-	var callback_m_guang_tpwd = function(data){
-		$(tpwd_dgContent).find("span[info='tpwd']").html(data);
-	};
+	
 
 	if(userType==0)
 		userType_txt = "淘宝";
