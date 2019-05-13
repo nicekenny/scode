@@ -324,7 +324,7 @@ function doBuy(a) {
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
 		+"<div class=\"tpwd_content\"><p>"+title+"</p><p>优惠价：&nbsp;<b>"+price+"</b>元</p><p style=\"color:#0099CC;\">淘口令：&nbsp;<span info=\"tpwd\">Loading...</span></p></div>"
-		+"<div class=\"item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=f3f3f3&fg=ff0000&gc=222222&el=l&w=200&m=10&text="+buyUrl+"\" style=\"width:160px;height:160px;\"/></div>"
+		+"<div class=\"item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=f3f3f3&fg=ff0000&gc=222222&el=l&w=200&m=10&text="+encodeURIComponent(buyUrl)+"\" style=\"width:160px;height:160px;\"/></div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
 		+"<a href=\""+buyUrl+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
