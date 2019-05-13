@@ -249,7 +249,7 @@ function show_m_guang(data) {
 		for(var i=0;i<items.length;i++) {
 			var item = items[i];
 
-			var item_li = "<li class=\"wall_item\">"+"<a href=\""+item.clickUrl+"\" target=\"_blank\">"
+			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" click_url=\""+item.clickUrl+"\" >"
 				+"<div class=\"item_img\">"+"<img src=\""+item.pictUrl+"_250x250q90.jpg\" alt=\""+item.title+"\" />"
 				+"</div><div class=\"item_title\">"+item.title+"</div>"+"<div class=\"item_info\">"
 				+"<span class=\"item_info_price\"><i>¥</i>"+item.finalPriceWap+"</span>"
@@ -292,6 +292,12 @@ function show_m_guang(data) {
 		}
 	}
 	
+}
+// 去购买（淘口令）
+function doBuy(a) {
+	var click_url = $(a).attr("click_url");
+	var content = dialogLayer.open("淘口令",150,250);
+
 }
 // 获取日期（月-日）
 function dateMMdd(time) {
