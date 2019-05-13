@@ -13,7 +13,7 @@ var serv_basepath = "http://x.scode.org.cn:81/";
 // serv_basepath = "http://localhost/scodelab/";
 serv_basepath = "https://x.scode.org.cn:444/";
 // 初始化页码
-var page_no = 1,current_page_no = 0;
+var page_no = 1,current_page_no = 0,loaded = true;
 
 // 页面数据初始化
 $(function() {
@@ -42,6 +42,17 @@ $(function() {
 			
 			if(window_top>(items_box.offset().top+items_box.height()-1000)) {
 				loadGoods();
+			}
+		});
+	} else if(pathname=="/m/guang.html") {
+		load_m_guang();
+		// 滚动条加载商品数据
+		$(window).scroll(function() {
+			var items_box = $("#product_walls");
+			var window_top = $(window).scrollTop();
+			
+			if(window_top>(items_box.offset().top+items_box.height()-1000) && loaded) {
+				load_m_guang();
 			}
 		});
 	}
@@ -86,6 +97,26 @@ function loadGoods() {
 		type: 'GET',
 		dataType: "jsonp",
 		jsonpCallback: "showGoods",
+		success: function (data) {
+			//console.info("success");
+		}
+	});
+}
+// m_guang.html页面数据加载
+function load_m_guang() {
+	if(page_no<=current_page_no)
+		return;
+	// 设置当前页码
+	current_page_no = page_no;
+	// 设置加载中
+	loaded = false;
+	$("#wall_loading").show();
+	var categoryId = getQueryString("cate");
+	$.ajax({
+		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId+"&page="+page_no,
+		type: 'GET',
+		dataType: "jsonp",
+		jsonpCallback: "show_m_guang",
 		success: function (data) {
 			//console.info("success");
 		}
@@ -186,6 +217,62 @@ function showGoods(data) {
 					category_li = category_li + "\" >";
 				}
 				category_li = category_li + category.favoritesTitle+"</a>";
+
+				$("#category_list").append(category_li);
+			}
+		}
+	}
+	
+}
+// m_guang回调函数
+function show_m_guang(data) {
+	var current_category = data.currentCategory;
+	if(current_category!=undefined) {
+		$(document).attr("title", current_category + " - Shopping - scode.org.cn");
+	}
+	$("#wall_loading").hide();
+	var items = data.items;
+	if(items!=undefined) {
+		for(var i=0;i<items.length;i++) {
+			var item = items[i];
+
+			var item_li = "<li class=\"wall_item\">"+"<a href=\""+item.clickUrl+"\">"
+				+"<div class=\"item_img\">"+"<img src=\""+item.pictUrl+"_250x250q90.jpg\" alt=\""+item.title+"\" />"
+				+"</div><div class=\"item_title\">"+item.title+"</div>"+"<div class=\"item_info\">"
+				+"<span class=\"item_info_price\"><i>¥</i>"+item.zkFinalPrice+"</span>"
+				+"<span class=\"item_info_delprice\">¥"+item.reservePrice+"</span>"
+				+"<span class=\"item_info_provcity\">"+item.provcity+"</span>"
+				+"</div></a></li>";
+
+
+			var pw_h_max = $("#product_walls").height();
+			var pw_min;
+			$("#product_walls").find("ul.wall_wrap").each(function() {
+				if($(this).height()<=pw_h_max) {
+					pw_h_max = $(this).height();
+					pw_min = $(this);
+				}
+			});
+			pw_min.append(item_html);
+			wall_count++;
+
+		}
+		// 全局页码翻页
+		page_no = page_no + 1;
+		loaded = true;
+	}
+	if(current_page_no<=1) {
+		var categorys = data.categorys;
+		if(categorys!=undefined) {
+			for(var i=0;i<categorys.length;i++) {
+				var category = categorys[i];
+
+				var current_li = "";
+				if(category.favoritesId == data.currentCategoryId) {
+					current_li = " class=\"current\"";
+				}
+
+				var category_li = "<li"+current_li+"><a href=\""+basepath+"m/guang.html?cate="+category.favoritesId+ "\" >"+ category.favoritesTitle+"</a></li>";
 
 				$("#category_list").append(category_li);
 			}
