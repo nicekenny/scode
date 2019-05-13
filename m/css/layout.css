@@ -86,16 +86,14 @@ a:hover {
 	margin-right: auto;
 	margin-left: auto;
 	background-color: #EFEFEF;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .category_childs_box {
-	background-color: #f6f6f6;
+	background-color: #FFFFFF;
 	padding: 0px;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #DCDCDC;
 	position: relative;
-	height: 35px;
 }
 .category_childs_box .more_open {
 	background-image: url(images/up_down_icon.png);
@@ -124,7 +122,6 @@ a:hover {
 .cc_root_box {
 	padding: 0px;
 	overflow: scroll;
-	height: 35px;
 }
 .cc_root_box::-webkit-scrollbar {
 	display: none;
@@ -148,15 +145,15 @@ a:hover {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	border-top-width: 2px;
-	border-top-style: solid;
-	border-top-color: #f6f6f6;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
 }
 .cc_root_box li.current a {
 	color: #ff6570;
-	border-top-width: 2px;
-	border-top-style: solid;
-	border-top-color: #FF6570;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #FF6570;
 }
 
 .ccr_csbox {
