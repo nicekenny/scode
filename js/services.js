@@ -249,7 +249,7 @@ function show_m_guang(data) {
 		for(var i=0;i<items.length;i++) {
 			var item = items[i];
 
-			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" buyUrl=\""+item.buyUrl+"\" tpwd=\""+item.tpwd+"\" title=\""+item.title+"\" price=\""+item.finalPriceWap+"\" userType=\""+item.userType+"\" >"
+			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" itemId=\""+item.numIid+"\" buyUrl=\""+item.buyUrl+"\" tpwd=\""+item.tpwd+"\" title=\""+item.title+"\" price=\""+item.finalPriceWap+"\" userType=\""+item.userType+"\" >"
 				+"<div class=\"item_img\">"+"<img src=\""+item.pictUrl+"_250x250q90.jpg\" alt=\""+item.title+"\" />"
 				+"</div><div class=\"item_title\">"+item.title+"</div>"+"<div class=\"item_info\">"
 				+"<span class=\"item_info_price\"><i>¥</i>"+item.finalPriceWap+"</span>"
@@ -295,6 +295,7 @@ function show_m_guang(data) {
 }
 // 去购买（淘口令）
 function doBuy(a) {
+	var itemId = $(a).attr("itemId");
 	var buyUrl = $(a).attr("buyUrl");
 	var tpwd = $(a).attr("tpwd");
 	var title = $(a).attr("title");
@@ -302,13 +303,26 @@ function doBuy(a) {
 	var userType = $(a).attr("userType");
 	var userType_txt = "";
 
+	var tpwd_dialog = new dialogLayer();
+	var tpwd_dgContent = tpwd_dialog.open("淘口令/二维码，快速淘好货！",250,340);
+
+	// 调用接口，获取淘口令
+	$.ajax({
+		url: serv_basepath + "taobao/item/ajaxItemTpwd.html?id="+itemId+"&url="+buyUrl,
+		type: 'GET',
+		dataType: "jsonp",
+		success: function (data) {
+			$(tpwd_dgContent).find("span[info='tpwd']").html(data);
+		}
+	});
+
 	if(userType==0)
 		userType_txt = "淘宝";
 	else if(userType==1)
 		userType_txt = "天猫/淘宝";
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
-		+"<div class=\"tpwd_content\"><p>"+title+"</p><p style=\"color:#0099CC;\">淘口令：&nbsp;"+tpwd+"</p><p>优惠价：&nbsp;"+price+"元</p></div>"
+		+"<div class=\"tpwd_content\"><p>"+title+"</p><p style=\"color:#0099CC;\">淘口令：&nbsp;<span info=\"tpwd\">"+tpwd+"</span></p><p>优惠价：&nbsp;"+price+"元</p></div>"
 		+"<div class=\"item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=f3f3f3&fg=ff0000&gc=222222&el=l&w=200&m=10&text="+buyUrl+"\" style=\"width:160px;height:160px;\"/></div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
@@ -316,9 +330,6 @@ function doBuy(a) {
 		+"<a class=\"tpwd_qrcode\">二维码</a>"
 		+"<a class=\"tpwd_close\">再逛逛</a>"
 		+"</div></div>";
-
-	var tpwd_dialog = new dialogLayer();
-	var tpwd_dgContent = tpwd_dialog.open("淘口令/二维码，快速淘好货！",250,340);
 
 	$(tpwd_dgContent).html(tpwd_html);
 	$(tpwd_dialog.getDialog()).fadeIn(500);
