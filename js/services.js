@@ -253,7 +253,7 @@ function show_m_guang(data) {
 					pw_min = $(this);
 				}
 			});
-			pw_min.append(item_html);
+			pw_min.append(item_li);
 			wall_count++;
 
 		}
