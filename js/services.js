@@ -210,7 +210,7 @@ function showGoods(data) {
 			var item_li = "<li class=\"cgi\"><a href=\""+item.clickUrl+"\" target=\"_blank\" class=\"img_square\"><img src=\""+item.pictUrl+"_250x250q90.jpg\"></a>"
 				+"<p class=\"title\"><a href=\""+item.clickUrl+"\" target=\"_blank\">"+item.title+"</a></p>"
 				//+"<div class=\"coupon\"><span class=\"cp_title\">满19元减10元</span><a href=\"\" target=\"_blank\" class=\"cp_link\">去领券</a></div>"
-				+"<div class=\"goods_info\"><b class=\"price_info\"><i>￥</i>"+item.zkFinalPrice+"</b><span class=\"fav_num\">"+item.volume+"</span></div></li>";
+				+"<div class=\"goods_info\"><b class=\"price_info\"><i>￥</i>"+item.finalPrice+"</b><span class=\"fav_num\">"+item.volume+"</span></div></li>";
 
 			$("#goods_list").append(item_li);
 		}
@@ -252,7 +252,7 @@ function show_m_guang(data) {
 			var item_li = "<li class=\"wall_item\">"+"<a href=\""+item.clickUrl+"\" target=\"_blank\">"
 				+"<div class=\"item_img\">"+"<img src=\""+item.pictUrl+"_250x250q90.jpg\" alt=\""+item.title+"\" />"
 				+"</div><div class=\"item_title\">"+item.title+"</div>"+"<div class=\"item_info\">"
-				+"<span class=\"item_info_price\"><i>¥</i>"+item.zkFinalPrice+"</span>"
+				+"<span class=\"item_info_price\"><i>¥</i>"+item.finalPriceWap+"</span>"
 				//+"<span class=\"item_info_delprice\">¥"+item.reservePrice+"</span>"
 				+"<span class=\"item_info_likes\">"+item.volume+"</span>"
 				//+"<span class=\"item_info_provcity\">"+item.provcity+"</span>"
