@@ -145,6 +145,9 @@ a:hover {
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 	border-bottom-color: #FFFFFF;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
 }
 .cc_root_box li.current a {
 	color: #ff6570;
