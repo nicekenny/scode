@@ -370,6 +370,11 @@ a:hover {
 	line-height: 20px;
 	overflow: hidden;
 }
+.tao_pwd .item_qrcode {
+	height: 200px;
+	width: 200px;
+}
+
 .tao_pwd .tpwd_info {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -391,4 +396,7 @@ a:hover {
 }
 .tao_pwd .tpwd_links .tpwd_close {
 	background-color: #99CC33;
+}
+.tao_pwd .tpwd_links .tpwd_qrcode {
+	color: #FF6600;
 }
