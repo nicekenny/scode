@@ -249,7 +249,7 @@ function show_m_guang(data) {
 		for(var i=0;i<items.length;i++) {
 			var item = items[i];
 
-			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" click_url=\""+item.clickUrl+"\" tpwd=\""+item.tpwd+"\" >"
+			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" click_url=\""+item.clickUrl+"\" tpwd=\""+item.tpwd+"\" title=\""+item.title+"\" price=\""+item.finalPriceWap+"\" >"
 				+"<div class=\"item_img\">"+"<img src=\""+item.pictUrl+"_250x250q90.jpg\" alt=\""+item.title+"\" />"
 				+"</div><div class=\"item_title\">"+item.title+"</div>"+"<div class=\"item_info\">"
 				+"<span class=\"item_info_price\"><i>¥</i>"+item.finalPriceWap+"</span>"
@@ -297,9 +297,11 @@ function show_m_guang(data) {
 function doBuy(a) {
 	var click_url = $(a).attr("click_url");
 	var tpwd = $(a).attr("tpwd");
+	var title = $(a).attr("title");
+	var price = $(a).attr("price");
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
-		+"<div class=\"tpwd_content\">淘口令:"+tpwd+"</div>"
+		+"<div class=\"tpwd_content\">"+title+"<br/>优惠价："+price+"元<br/>淘口令:【 "+tpwd+" 】</div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开天猫/淘宝APP购买</div>"
 		+"<div class=\"tpwd_links\">"
 		+"<a href=\""+click_url+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
