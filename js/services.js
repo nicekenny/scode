@@ -249,7 +249,7 @@ function show_m_guang(data) {
 		for(var i=0;i<items.length;i++) {
 			var item = items[i];
 
-			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" click_url=\""+item.clickUrl+"\" >"
+			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" click_url=\""+item.clickUrl+"\" tpwd=\""+item.tpwd+"\" >"
 				+"<div class=\"item_img\">"+"<img src=\""+item.pictUrl+"_250x250q90.jpg\" alt=\""+item.title+"\" />"
 				+"</div><div class=\"item_title\">"+item.title+"</div>"+"<div class=\"item_info\">"
 				+"<span class=\"item_info_price\"><i>¥</i>"+item.finalPriceWap+"</span>"
@@ -296,9 +296,25 @@ function show_m_guang(data) {
 // 去购买（淘口令）
 function doBuy(a) {
 	var click_url = $(a).attr("click_url");
-	var dialog = new dialogLayer();
-	var content = dialog.open("淘口令",150,250);
+	var tpwd = $(a).attr("tpwd");
 
+	var tpwd_html = "<div class=\"tao_pwd\">"
+		+"<div class=\"tpwd_content\">淘口令:"+tpwd+"</div>"
+		+"<div class=\"tpwd_info\">复制淘口令，打开淘宝APP购买</div>"
+		+"<div class=\"tpwd_links\">"
+		+"<a href=\""+click_url+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
+		+"<a class=\"tpwd_close\">再逛逛</a>"
+		+"</div></div>";
+
+	var dialog = new dialogLayer();
+	var content = dialog.open("淘口令",250,300);
+
+	$(dgContent).html(tpwd_html);
+	$(taskDialog.getDialog()).fadeIn(500);
+
+	$(dgContent).find(".tpwd_close").click(function() {
+		dialog.close();
+	});
 }
 // 获取日期（月-日）
 function dateMMdd(time) {
