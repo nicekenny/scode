@@ -318,7 +318,7 @@ function doBuy(a) {
 		+"</div></div>";
 
 	var tpwd_dialog = new dialogLayer();
-	var tpwd_dgContent = tpwd_dialog.open("淘口令/二维码，快速淘好货！",250,360);
+	var tpwd_dgContent = tpwd_dialog.open("淘口令/二维码，快速淘好货！",250,340);
 
 	$(tpwd_dgContent).html(tpwd_html);
 	$(tpwd_dialog.getDialog()).fadeIn(500);
