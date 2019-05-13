@@ -305,7 +305,7 @@ function doBuy(a) {
 	if(userType==0)
 		userType_txt = "淘宝";
 	else if(userType==1)
-		userType_txt = "天猫";
+		userType_txt = "天猫/淘宝";
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
 		+"<div class=\"tpwd_content\"><p>"+title+"</p><p style=\"color:#0099CC;\">淘口令：&nbsp;"+tpwd+"</p><p>优惠价：&nbsp;"+price+"元</p></div>"
