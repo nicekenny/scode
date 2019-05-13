@@ -17,7 +17,6 @@
 	box-shadow: 0 3px 5px #999999;
 	overflow: hidden;
 	border-radius: 3px 3px 3px 3px;
-	display: none;
 }
 .dialogLayer .dialogTitle {
 	background-color: #EAECEB;
