@@ -54,6 +54,19 @@ $(function() {
 			if(window_top>(items_box.offset().top+items_box.height()-1000) && loaded) {
 				load_m_guang();
 			}
+
+			// 固定导航条
+			var category_list = $("#category_list");
+			if(window_top>50) {
+				if(!category_list.hasClass("nav_fixed")) {
+					category_list.addClass("nav_fixed");
+				}
+			} else {
+				if(category_list.hasClass("nav_fixed")) {
+					category_list.removeClass("nav_fixed");
+				}
+			}
+
 		});
 	}
 	
