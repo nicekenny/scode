@@ -330,11 +330,13 @@ function doBuy(a) {
 		var tmp_link = $(this);
 		if(tmp_link.text()=="二维码") {
 			$(tpwd_dgContent).find(".tpwd_content").hide();
+			$(tpwd_dgContent).find(".tpwd_info").hide();
 			$(tpwd_dgContent).find(".item_qrcode").show();
 			tmp_link.text("淘口令");
 		} else {
 			$(tpwd_dgContent).find(".item_qrcode").hide();
 			$(tpwd_dgContent).find(".tpwd_content").show();
+			$(tpwd_dgContent).find(".tpwd_info").show();
 			tmp_link.text("二维码");
 		}
 	});
