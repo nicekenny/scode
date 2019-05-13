@@ -89,7 +89,33 @@ a:hover {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-
+.head_bar {
+	height: 45px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #19a4fc;
+	position: relative;
+	/*box-shadow: 0px 1px 3px #E0E0E0;*/
+	z-index: 1000;
+	background-color: #FFFFFF;
+}
+.head_bar .hb_center {
+	margin-right: 45px;
+	margin-left: 45px;
+	height: 45px;
+	text-align: center;
+}
+.hb_title {
+	font-size: 20px;
+	line-height: 43px;
+	font-weight: 400;
+	color: #333333;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding-top: 2px;
+}
 .category_childs_box {
 	background-color: #FFFFFF;
 	position: relative;
