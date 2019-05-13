@@ -307,7 +307,7 @@ function doBuy(a) {
 		+"</div></div>";
 
 	var dialog = new dialogLayer();
-	var content = dialog.open("淘口令",250,300);
+	var dgContent = dialog.open("淘口令",250,300);
 
 	$(dgContent).html(tpwd_html);
 	$(taskDialog.getDialog()).fadeIn(500);
