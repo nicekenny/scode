@@ -92,8 +92,14 @@ a:hover {
 
 .category_childs_box {
 	background-color: #FFFFFF;
-	padding: 0px;
 	position: relative;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #333333;
 }
 .category_childs_box .more_open {
 	background-image: url(images/up_down_icon.png);
@@ -122,9 +128,6 @@ a:hover {
 .cc_root_box {
 	padding: 0px;
 	overflow: scroll;
-	border-top-width: 1px;
-	border-top-style: solid;
-	border-top-color: #333333;
 }
 .cc_root_box::-webkit-scrollbar {
 	display: none;
