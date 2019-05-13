@@ -122,6 +122,9 @@ a:hover {
 .cc_root_box {
 	padding: 0px;
 	overflow: scroll;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #333333;
 }
 .cc_root_box::-webkit-scrollbar {
 	display: none;
