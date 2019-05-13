@@ -363,7 +363,7 @@ a:hover {
 	
 }
 .tao_pwd .tpwd_content {
-	border: 1px dashed #CCCCCC;
+	border: 1px dashed #999999;
 	padding: 5px;
 	height: 50px;
 }
@@ -374,11 +374,17 @@ a:hover {
 .tao_pwd .tpwd_links a {
 	display: block;
 	font-size: 14px;
-	line-height: 30px;
+	line-height: 35px;
 	background-color: #d52f37;
 	font-weight: bold;
 	color: #FFFFFF;
 	text-decoration: none;
 	text-align: center;
 	margin-bottom: 10px;
+}
+.tao_pwd .tpwd_links .tpwd_buylink {
+	background-color: #99CC33;
+}
+.tao_pwd .tpwd_links .tpwd_close {
+	background-color: #999999;
 }
