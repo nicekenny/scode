@@ -312,8 +312,8 @@ function doBuy(a) {
 		+"<div class=\"item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=f3f3f3&fg=ff0000&gc=222222&el=l&w=160&m=10&text="+buyUrl+"\"/></div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
-		+"<a class=\"tpwd_qrcode\">二维码</a>"
 		+"<a href=\""+buyUrl+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
+		+"<a class=\"tpwd_qrcode\">二维码</a>"
 		+"<a class=\"tpwd_close\">再逛逛</a>"
 		+"</div></div>";
 
