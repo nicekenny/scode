@@ -57,7 +57,7 @@ $(function() {
 
 			// 固定导航条
 			var category_list = $("#category_list");
-			if(window_top>50) {
+			if(window_top>category_list.offset().top) {
 				if(!category_list.hasClass("nav_fixed")) {
 					category_list.addClass("nav_fixed");
 				}
