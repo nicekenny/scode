@@ -228,7 +228,7 @@ function showGoods(data) {
 function show_m_guang(data) {
 	var current_category = data.currentCategory;
 	if(current_category!=undefined) {
-		$(document).attr("title", current_category + " - Shopping - scode.org.cn");
+		$(document).attr("title", current_category + " - 逛街啦");
 	}
 	$("#wall_loading").hide();
 	var items = data.items;
