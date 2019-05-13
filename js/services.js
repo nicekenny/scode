@@ -249,7 +249,7 @@ function show_m_guang(data) {
 		for(var i=0;i<items.length;i++) {
 			var item = items[i];
 
-			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" click_url=\""+item.clickUrl+"\" tpwd=\""+item.tpwd+"\" title=\""+item.title+"\" price=\""+item.finalPriceWap+"\" >"
+			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" click_url=\""+item.clickUrl+"\" tpwd=\""+item.tpwd+"\" title=\""+item.title+"\" price=\""+item.finalPriceWap+"\" userType=\""+item.userType+"\" >"
 				+"<div class=\"item_img\">"+"<img src=\""+item.pictUrl+"_250x250q90.jpg\" alt=\""+item.title+"\" />"
 				+"</div><div class=\"item_title\">"+item.title+"</div>"+"<div class=\"item_info\">"
 				+"<span class=\"item_info_price\"><i>¥</i>"+item.finalPriceWap+"</span>"
@@ -299,10 +299,17 @@ function doBuy(a) {
 	var tpwd = $(a).attr("tpwd");
 	var title = $(a).attr("title");
 	var price = $(a).attr("price");
+	var userType = $(a).attr("userType");
+	var userType_txt = "";
+
+	if(userType==0)
+		userType_txt = "淘宝";
+	else if(userType==1)
+		userType_txt = "天猫";
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
 		+"<div class=\"tpwd_content\">"+title+"<br/>优惠价：&nbsp;"+price+"元<br/>淘口令：&nbsp;<b>"+tpwd+"</b></div>"
-		+"<div class=\"tpwd_info\">复制淘口令，打开天猫/淘宝APP购买</div>"
+		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
 		+"<a href=\""+click_url+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
 		+"<a class=\"tpwd_close\">再逛逛</a>"
