@@ -254,7 +254,6 @@ function show_m_guang(data) {
 				}
 			});
 			pw_min.append(item_li);
-			wall_count++;
 
 		}
 		// 全局页码翻页
