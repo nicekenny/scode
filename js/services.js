@@ -301,7 +301,7 @@ function doBuy(a) {
 	var price = $(a).attr("price");
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
-		+"<div class=\"tpwd_content\">"+title+"<br/>优惠价："+price+"元<br/>淘口令：&nbsp;<b>"+tpwd+"</b></div>"
+		+"<div class=\"tpwd_content\">"+title+"<br/>优惠价："+price+"元<br/>淘口令：<b>"+tpwd+"</b></div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开天猫/淘宝APP购买</div>"
 		+"<div class=\"tpwd_links\">"
 		+"<a href=\""+click_url+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
