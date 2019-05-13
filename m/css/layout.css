@@ -244,23 +244,26 @@ a:hover {
 }
 .wall_item .item_title {
 	font-size: 12px;
-	line-height: 20px;
+	line-height: 18px;
 	color: #333333;
 	text-decoration: none;
 	text-align: left;
-	padding-right: 5px;
-	padding-left: 5px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	max-height: 40px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	max-height: 36px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	word-wrap: break-word;
+	white-space: normal;
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 .wall_item .item_info {
 	text-align: left;
-	padding-right: 5px;
-	padding-left: 5px;
+	padding-right: 8px;
+	padding-left: 8px;
 	padding-top: 0px;
 	padding-bottom: 5px;
 	height: 22px;
@@ -292,9 +295,11 @@ a:hover {
 	line-height: 20px;
 	background-image: url(images/wall_like_icon.png);
 	background-repeat: no-repeat;
-	background-position: 0px 3px;
+	background-position: 0px 4px;
 	padding-left: 16px;
 	color: #999999;
+	float: right;
+	height: 20px;
 }
 .wall_item .item_info .item_info_sales {
 	font-size: 12px;
