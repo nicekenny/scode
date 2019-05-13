@@ -308,7 +308,7 @@ function doBuy(a) {
 
 	// 调用接口，获取淘口令
 	$.ajax({
-		url: serv_basepath + "taobao/item/ajaxItemTpwd.html?id="+itemId+"&url="+buyUrl,
+		url: serv_basepath + "taobao/item/ajaxItemTpwd.html?id="+itemId+"&url="+encodeURIComponent(buyUrl),
 		type: 'GET',
 		dataType: "jsonp",
 		success: function (data) {
