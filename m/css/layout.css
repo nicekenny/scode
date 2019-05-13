@@ -384,6 +384,7 @@ a:hover {
 	text-decoration: none;
 	text-align: center;
 	margin-bottom: 15px;
+	border-radius: 3px;
 }
 .tao_pwd .tpwd_links .tpwd_buylink {
 	background-color: #CC3333;
