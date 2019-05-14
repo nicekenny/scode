@@ -327,7 +327,7 @@ function doBuy(a) {
 		+"<div class=\"item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=f3f3f3&fg=ff0000&gc=222222&el=l&w=200&m=10&text="+encodeURIComponent(buyUrl)+"\" style=\"width:160px;height:160px;\"/></div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
-		+"<a href=\""+buyUrl+"\" target=\"_blank\" class=\"tpwd_buylink\" clipboard=\"true\">直达连接</a>"
+		+"<a href=\""+buyUrl+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
 		+"<a class=\"tpwd_qrcode\">二维码</a>"
 		+"<a class=\"tpwd_close\">再逛逛</a>"
 		+"</div></div>";
@@ -354,11 +354,11 @@ function doBuy(a) {
 	});
 	
 	// 微信浏览器中优先显示二维码
-	if(current_browser=="WeiXin" || current_browser=="PC") {
+	if(current_browser=="WeiXin") {
 		$(tpwd_dgContent).find(".tpwd_buylink").removeAttr("href");
-		$(tpwd_dgContent).find(".tpwd_buylink").attr("clipboard","true");
-	} else {
-		$(tpwd_dgContent).find(".tpwd_buylink").removeAttr("clipboard");
+		$(tpwd_dgContent).find(".tpwd_buylink").click(function() {
+			$(tpwd_dgContent).find(".tpwd_info").html("<span style=\"color:#FF0088;\">请复制口令</span>，打开"+userType_txt+"APP购买");
+		});
 	}
 	// 设置窗口背景图片
 	var pic_url = $(a).find("img:first-child").attr("pic")+"_300x300q90.jpg";
@@ -366,7 +366,7 @@ function doBuy(a) {
 	$(tpwd_dgContent).css("background-repeat","no-repeat");
 	$(tpwd_dgContent).css("background-position","center center");
 	// 点击内容一键拷贝
-	var clipboard = new ClipboardJS("*[clipboard='true']", {
+	var clipboard = new ClipboardJS("div[clipboard='true']", {
         text: function(content) {
             return $(content).find("span[info='tpwd']").text();
         }
