@@ -250,7 +250,7 @@ function show_m_guang(data) {
 			var item = items[i];
 
 			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" itemId=\""+item.numIid+"\" buyUrl=\""+item.buyUrl+"\" tpwd=\""+item.tpwd+"\" title=\""+item.title+"\" price=\""+item.finalPriceWap+"\" userType=\""+item.userType+"\" >"
-				+"<div class=\"item_img\">"+"<img src=\""+item.pictUrl+"_250x250q90.jpg\" alt=\""+item.title+"\" />"
+				+"<div class=\"item_img\">"+"<img src=\""+item.pictUrl+"_250x250q90.jpg\" pic=\""+item.pictUrl+"\" alt=\""+item.title+"\" />"
 				+"</div><div class=\"item_title\">"+item.title+"</div>"+"<div class=\"item_info\">"
 				+"<span class=\"item_info_price\"><i>¥</i>"+item.finalPriceWap+"</span>"
 				//+"<span class=\"item_info_delprice\">¥"+item.reservePrice+"</span>"
@@ -359,7 +359,7 @@ function doBuy(a) {
 	//	$(tpwd_dgContent).find(".item_qrcode").show();
 	//	$(tpwd_dgContent).find(".tpwd_qrcode").text("淘口令");
 	//}
-	var pic_url = $(a).find("img:first-child").attr("src");
+	var pic_url = $(a).find("img:first-child").attr("pic")+"_350x350q90.jpg";
 	$(tpwd_dgContent).css("background-image","url("+pic_url+")");
 	$(tpwd_dgContent).css("background-repeat","no-repeat");
 	$(tpwd_dgContent).css("background-position","center center");
