@@ -366,8 +366,8 @@ function doBuy(a) {
 	$(tpwd_dgContent).css("background-position","center center");
 	// 点击内容一键拷贝
 	var clipboard = new ClipboardJS(".tpwd_content", {
-        text: function() {
-            return tpwd;
+        text: function(content) {
+            return $(content).find("span[info='tpwd']").text();
         }
     });
     clipboard.on("success", function(e) {
