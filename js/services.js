@@ -361,6 +361,8 @@ function doBuy(a) {
 	//}
 	var pic_url = $(a).find("img:first-child").attr("src");
 	$(tpwd_dgContent).css("background-image",pic_url);
+	$(tpwd_dgContent).css("background-repeat","no-repeat");
+	$(tpwd_dgContent).css("background-position","center center");
 }
 
 // 获取日期（月-日）
