@@ -369,6 +369,7 @@ a:hover {
 	font-size: 14px;
 	line-height: 20px;
 	overflow: hidden;
+	-webkit-user-select: all;
 }
 .tao_pwd .item_qrcode {
 	height: 160px;
