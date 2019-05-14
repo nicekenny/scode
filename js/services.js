@@ -352,6 +352,13 @@ function doBuy(a) {
 			tmp_link.text("二维码");
 		}
 	});
+	// 微信浏览器中优先显示二维码
+	if(current_browser=="WeiXin") {
+		$(tpwd_dgContent).find(".tpwd_content").hide();
+		$(tpwd_dgContent).find(".tpwd_info").hide();
+		$(tpwd_dgContent).find(".item_qrcode").show();
+		tmp_link.text("淘口令");
+	}
 }
 
 // 获取日期（月-日）
