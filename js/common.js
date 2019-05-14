@@ -38,19 +38,21 @@ $(function() {
 		} else if (ua.match(/QQ/i) == "qq") {
 			//在QQ空间打开
 			current_browser = "QQ";
-		} else if (browser.versions.ios) {
+		}
+		if (browser.versions.ios) {
 			//是否在IOS浏览器打开
-			current_browser = "IOS";
+			current_browser_platform = "IOS";
 		} else if(browser.versions.android) {
 			//是否在安卓浏览器打开
-			current_browser = "Android";
+			current_browser_platform = "Android";
 		}
 	} else {
 		//否则就是PC浏览器打开
 		current_browser = "PC";
+		current_browser_platform = "PC";
 	}
 });
-var current_browser = "PC";
+var current_browser = "PC", current_browser_platform = "PC";
 var browser = {
     versions: function () {
         var u = navigator.userAgent, app = navigator.appVersion;
