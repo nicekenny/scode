@@ -323,7 +323,7 @@ function doBuy(a) {
 		userType_txt = "天猫/淘宝";
 
 	var tpwd_html = "<div class=\"tao_pwd\">"
-		+"<div class=\"tpwd_content\"><p>"+title+"</p><p>优惠价：<b>"+price+"</b>元</p><p style=\"color:#0099CC;\">淘口令：<span info=\"tpwd\">载入中...</span></p></div>"
+		+"<div class=\"tpwd_content\" clipboard=\"true\"><p>"+title+"</p><p>优惠价：<b>"+price+"</b>元</p><p style=\"color:#0099CC;\">淘口令：<span info=\"tpwd\">载入中...</span></p></div>"
 		+"<div class=\"item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=f3f3f3&fg=ff0000&gc=222222&el=l&w=200&m=10&text="+encodeURIComponent(buyUrl)+"\" style=\"width:160px;height:160px;\"/></div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
@@ -354,18 +354,15 @@ function doBuy(a) {
 	});
 	
 	// 微信浏览器中优先显示二维码
-	//if(current_browser=="WeiXin") {
-	//	$(tpwd_dgContent).find(".tpwd_content").hide();
-	//	$(tpwd_dgContent).find(".tpwd_info").hide();
-	//	$(tpwd_dgContent).find(".item_qrcode").show();
-	//	$(tpwd_dgContent).find(".tpwd_qrcode").text("淘口令");
-	//}
+	if(current_browser=="WeiXin") {
+		$(tpwd_dgContent).find(".tpwd_buylink").removeAttr("href").attr("clipboard","true");
+	}
 	var pic_url = $(a).find("img:first-child").attr("pic")+"_300x300q90.jpg";
 	$(tpwd_dgContent).css("background-image","url("+pic_url+")");
 	$(tpwd_dgContent).css("background-repeat","no-repeat");
 	$(tpwd_dgContent).css("background-position","center center");
 	// 点击内容一键拷贝
-	var clipboard = new ClipboardJS(".tpwd_content", {
+	var clipboard = new ClipboardJS("*[clipboard='true']", {
         text: function(content) {
             return $(content).find("span[info='tpwd']").text();
         }
