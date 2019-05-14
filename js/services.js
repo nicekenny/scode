@@ -352,6 +352,7 @@ function doBuy(a) {
 			tmp_link.text("二维码");
 		}
 	});
+	
 	// 微信浏览器中优先显示二维码
 	//if(current_browser=="WeiXin") {
 	//	$(tpwd_dgContent).find(".tpwd_content").hide();
@@ -363,6 +364,19 @@ function doBuy(a) {
 	$(tpwd_dgContent).css("background-image","url("+pic_url+")");
 	$(tpwd_dgContent).css("background-repeat","no-repeat");
 	$(tpwd_dgContent).css("background-position","center center");
+	// 点击内容一键拷贝
+	var clipboard = new ClipboardJS(".tpwd_content", {
+        text: function() {
+            return tpwd;
+        }
+    });
+    clipboard.on("success", function(e) {
+        // 拷贝成功
+		$(tpwd_dgContent).find(".tpwd_info").get(0).html("复制成功，打开"+userType_txt+"APP购买");
+    });
+    clipboard.on("error", function(e) {
+        // 提示失败，手工拷贝
+    });
 }
 
 // 获取日期（月-日）
