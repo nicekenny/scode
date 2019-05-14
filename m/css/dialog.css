@@ -44,6 +44,8 @@
 	padding: 0px;
 	overflow: hidden;
 	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .dialogLayer .dialogContent .dialogLoading {
 	width: 300px;
