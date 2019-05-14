@@ -333,7 +333,7 @@ function doBuy(a) {
 		+"</div></div>";
 
 	$(tpwd_dgContent).html(tpwd_html);
-	$(tpwd_dialog.getDialog()).fadeIn(500);
+	$(tpwd_dialog.getDialog()).fadeIn(300);
 
 	$(tpwd_dgContent).find(".tpwd_close").click(function() {
 		tpwd_dialog.close();
