@@ -32,20 +32,16 @@ $(function() {
 		if (ua.match(/MicroMessenger/i) == "micromessenger") {
 			//在微信中打开
 			current_browser = "WeiXin";
-		}
-		if (ua.match(/WeiBo/i) == "weibo") {
+		} else if (ua.match(/WeiBo/i) == "weibo") {
 			//在新浪微博客户端打开
 			current_browser = "WeiBo";
-		}
-		if (ua.match(/QQ/i) == "qq") {
+		} else if (ua.match(/QQ/i) == "qq") {
 			//在QQ空间打开
 			current_browser = "QQ";
-		}
-		if (browser.versions.ios) {
+		} else if (browser.versions.ios) {
 			//是否在IOS浏览器打开
 			current_browser = "IOS";
-		} 
-		if(browser.versions.android) {
+		} else if(browser.versions.android) {
 			//是否在安卓浏览器打开
 			current_browser = "Android";
 		}
