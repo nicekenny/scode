@@ -360,6 +360,8 @@ a:hover {
 .tao_pwd {
 	padding: 20px;
 	opacity: 0.3;
+	background-color: #FFFFFF;
+	
 	/*
 	-webkit-filter: opacity(30%);
     filter: opacity(30%);
