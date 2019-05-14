@@ -304,7 +304,7 @@ function doBuy(a) {
 	var userType_txt = "";
 
 	var tpwd_dialog = new dialogLayer();
-	var tpwd_dgContent = tpwd_dialog.open("淘口令/二维码，快速淘好货！",250,340);
+	var tpwd_dgContent = tpwd_dialog.open("淘口令/二维码，快速淘好货！",250,330);
 
 	// 调用接口，获取淘口令
 	$.ajax({
