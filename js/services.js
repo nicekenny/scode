@@ -361,8 +361,8 @@ function doBuy(a) {
 		});
 	}
 	// 设置窗口背景图片
-	var pic_url = $(a).find("img:first-child").attr("pic")+"_300x300q90.jpg";
-	$(tpwd_dgContent).css("background-image","url("+pic_url+")");
+	// var pic_url = $(a).find("img:first-child").attr("pic")+"_300x300q90.jpg";
+	// $(tpwd_dgContent).css("background-image","url("+pic_url+")");
 	// 点击内容一键拷贝
 	var clipboard = new ClipboardJS("div[clipboard='true']", {
         text: function(content) {
