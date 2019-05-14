@@ -357,7 +357,7 @@ function doBuy(a) {
 	if(current_browser=="WeiXin") {
 		$(tpwd_dgContent).find(".tpwd_buylink").removeAttr("href");
 		$(tpwd_dgContent).find(".tpwd_buylink").click(function() {
-			$(tpwd_dgContent).find(".tpwd_info").html("<span style=\"color:#FF0088;\">请复制口令</span>，打开"+userType_txt+"APP购买");
+			$(tpwd_dgContent).find(".tpwd_info").html("<span style=\"color:#FF0088;\">请复制淘口令</span>，打开"+userType_txt+"APP购买");
 		});
 	}
 	// 设置窗口背景图片
