@@ -357,7 +357,7 @@ function doBuy(a) {
 		$(tpwd_dgContent).find(".tpwd_content").hide();
 		$(tpwd_dgContent).find(".tpwd_info").hide();
 		$(tpwd_dgContent).find(".item_qrcode").show();
-		tmp_link.text("淘口令");
+		$(tpwd_dgContent).find(".tpwd_qrcode").text("淘口令");
 	}
 }
 
