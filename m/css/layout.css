@@ -369,7 +369,12 @@ a:hover {
 	font-size: 14px;
 	line-height: 20px;
 	overflow: hidden;
-	-webkit-user-select: all;
+	-webkit-appearance: none;
+	-webkit-user-select: text;
+}
+.tao_pwd .tpwd_content p {
+	-webkit-appearance: none;
+	-webkit-user-select: text;
 }
 .tao_pwd .item_qrcode {
 	height: 160px;
