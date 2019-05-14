@@ -51,7 +51,7 @@ $(function() {
 		current_browser = "PC";
 		current_browser_platform = "PC";
 	}
-	$("#browser_version").html("Browser:"+current_browser);
+	$("#browser_version").html("Browser["+current_browser+"]");
 });
 var current_browser = "PC", current_browser_platform = "PC";
 var browser = {
