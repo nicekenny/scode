@@ -372,7 +372,7 @@ function doBuy(a) {
     });
     clipboard.on("success", function(e) {
         // 拷贝成功
-		$(tpwd_dgContent).find(".tpwd_info").text("<span style=\"color:#FF0088;\">复制成功</span>，打开"+userType_txt+"APP购买");
+		$(tpwd_dgContent).find(".tpwd_info").html("<span style=\"color:#FF0088;\">复制成功</span>，打开"+userType_txt+"APP购买");
     });
     clipboard.on("error", function(e) {
         // 提示失败，手工拷贝
