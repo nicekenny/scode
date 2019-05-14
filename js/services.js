@@ -373,6 +373,7 @@ function doBuy(a) {
     clipboard.on("success", function(e) {
         // 拷贝成功
 		$(tpwd_dgContent).find(".tpwd_info").html("<span style=\"color:#FF0088;\">淘口令已复制</span>，打开"+userType_txt+"APP购买");
+		$(tpwd_dgContent).find(".tpwd_content").css("border", "1px dashed #FF6699");
     });
     clipboard.on("error", function(e) {
         // 提示失败，手工拷贝
