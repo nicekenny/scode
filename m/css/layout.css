@@ -402,12 +402,12 @@ a:hover {
 	border-radius: 3px;
 }
 .tao_pwd .tpwd_links .tpwd_buylink {
-	background-color: #CC3333;
+	background-color: #FF3366;
 	display: inline-block;
 	width: 47%;
 }
 .tao_pwd .tpwd_links .tpwd_close {
-	background-color: #99CC33;
+	background-color: #666666;
 }
 .tao_pwd .tpwd_links .tpwd_qrcode {
 	background-color: #FF6600;
