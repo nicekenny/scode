@@ -360,7 +360,7 @@ function doBuy(a) {
 	//	$(tpwd_dgContent).find(".tpwd_qrcode").text("淘口令");
 	//}
 	var pic_url = $(a).find("img:first-child").attr("src");
-	$(tpwd_dgContent).find(".tao_pwd").css("background-image",pic_url);
+	$(tpwd_dgContent).css("background-image",pic_url);
 }
 
 // 获取日期（月-日）
