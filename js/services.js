@@ -329,7 +329,7 @@ function doBuy(a) {
 		+"<div class=\"tpwd_links\">"
 		+"<a href=\""+buyUrl+"\" target=\"_blank\" class=\"tpwd_buylink\">直达连接</a>"
 		+"<a class=\"tpwd_qrcode\">二维码</a>"
-		+"<a class=\"tpwd_close\">再逛逛"+current_browser+"</a>"
+		+"<a class=\"tpwd_close\">再逛逛</a>"
 		+"</div></div>";
 
 	$(tpwd_dgContent).html(tpwd_html);
