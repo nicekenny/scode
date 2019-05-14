@@ -354,8 +354,9 @@ function doBuy(a) {
 	});
 	
 	// 微信浏览器中优先显示二维码
-	if(current_browser=="WeiXin") {
-		$(tpwd_dgContent).find(".tpwd_buylink").removeAttr("href").attr("clipboard","true");
+	if(current_browser=="WeiXin" || current_browser=="PC") {
+		$(tpwd_dgContent).find(".tpwd_buylink").removeAttr("href");
+		$(tpwd_dgContent).find(".tpwd_buylink").attr("clipboard","true");
 	}
 	var pic_url = $(a).find("img:first-child").attr("pic")+"_300x300q90.jpg";
 	$(tpwd_dgContent).css("background-image","url("+pic_url+")");
