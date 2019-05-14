@@ -359,8 +359,11 @@ a:hover {
 }
 .tao_pwd {
 	padding: 20px;
-	background-color: #FFFFFF;
-	
+	opacity: 0.3;
+	/*
+	-webkit-filter: opacity(30%);
+    filter: opacity(30%);
+	*/
 }
 .tao_pwd .tpwd_content {
 	border: 1px dashed #999999;
