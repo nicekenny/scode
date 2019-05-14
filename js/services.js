@@ -359,7 +359,7 @@ function doBuy(a) {
 	//	$(tpwd_dgContent).find(".item_qrcode").show();
 	//	$(tpwd_dgContent).find(".tpwd_qrcode").text("淘口令");
 	//}
-	var pic_url = $(a).find("img:first-child").attr("pic")+"_360x360q90.jpg";
+	var pic_url = $(a).find("img:first-child").attr("pic")+"_300x300q90.jpg";
 	$(tpwd_dgContent).css("background-image","url("+pic_url+")");
 	$(tpwd_dgContent).css("background-repeat","no-repeat");
 	$(tpwd_dgContent).css("background-position","center center");
