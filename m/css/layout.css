@@ -388,6 +388,7 @@ a:hover {
 .tao_pwd .tpwd_info {
 	padding-top: 10px;
 	padding-bottom: 10px;
+	text-align: center;
 }
 .tao_pwd .tpwd_links a {
 	display: block;
