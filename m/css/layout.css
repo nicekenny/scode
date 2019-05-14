@@ -372,7 +372,7 @@ a:hover {
 	-webkit-appearance: none;
 	-webkit-user-select: text;
 }
-.tao_pwd .tpwd_content p {
+.tao_pwd .tpwd_content * {
 	-webkit-appearance: none;
 	-webkit-user-select: text;
 }
