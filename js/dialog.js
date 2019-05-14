@@ -236,7 +236,7 @@ function ScDialog(basePath) {
 		dialogTitleText.className = "dialogTitleText";
 		dialogTitleText.innerHTML = title;
 		dialogContent.className = "dialogContent";
-		dialogContent.style.height = (height - 40) + "px";
+		dialogContent.style.height = (height - 30) + "px";
 		dialogTitle.appendChild(closeDialog);
 		dialogTitle.appendChild(dialogTitleText);
 		dialogLayer.appendChild(dialogTitle);
