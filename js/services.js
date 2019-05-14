@@ -308,7 +308,7 @@ function doBuy(a) {
 	var userType_txt = "";
 
 	if(coupon!=undefined && coupon!="")
-		coupon_txt = "(券)"
+		coupon_txt = "&nbsp;(券)"
 
 	if(userType==0)
 		userType_txt = "淘宝";
