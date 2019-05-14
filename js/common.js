@@ -25,32 +25,32 @@ $(function() {
 			}
 		}
 	});
-	//ÅĞ¶ÏÊÇ·ñÊÇÒÆ¶¯Éè±¸´ò¿ª¡£
+	//åˆ¤æ–­æ˜¯å¦æ˜¯ç§»åŠ¨è®¾å¤‡æ‰“å¼€ã€‚
 	if (browser.versions.mobile) {
-		//»ñÈ¡ÅĞ¶ÏÓÃµÄ¶ÔÏó
+		//è·å–åˆ¤æ–­ç”¨çš„å¯¹è±¡
 		var ua = navigator.userAgent.toLowerCase();
 		if (ua.match(/MicroMessenger/i) == "micromessenger") {
-			//ÔÚÎ¢ĞÅÖĞ´ò¿ª
+			//åœ¨å¾®ä¿¡ä¸­æ‰“å¼€
 			current_browser = "WeiXin";
 		}
 		if (ua.match(/WeiBo/i) == "weibo") {
-			//ÔÚĞÂÀËÎ¢²©¿Í»§¶Ë´ò¿ª
+			//åœ¨æ–°æµªå¾®åšå®¢æˆ·ç«¯æ‰“å¼€
 			current_browser = "WeiBo";
 		}
 		if (ua.match(/QQ/i) == "qq") {
-			//ÔÚQQ¿Õ¼ä´ò¿ª
+			//åœ¨QQç©ºé—´æ‰“å¼€
 			current_browser = "QQ";
 		}
 		if (browser.versions.ios) {
-			//ÊÇ·ñÔÚIOSä¯ÀÀÆ÷´ò¿ª
+			//æ˜¯å¦åœ¨IOSæµè§ˆå™¨æ‰“å¼€
 			current_browser = "IOS";
 		} 
 		if(browser.versions.android) {
-			//ÊÇ·ñÔÚ°²×¿ä¯ÀÀÆ÷´ò¿ª
+			//æ˜¯å¦åœ¨å®‰å“æµè§ˆå™¨æ‰“å¼€
 			current_browser = "Android";
 		}
 	} else {
-		//·ñÔò¾ÍÊÇPCä¯ÀÀÆ÷´ò¿ª
+		//å¦åˆ™å°±æ˜¯PCæµè§ˆå™¨æ‰“å¼€
 		current_browser = "PC";
 	}
 });
@@ -59,17 +59,17 @@ var browser = {
     versions: function () {
         var u = navigator.userAgent, app = navigator.appVersion;
         return {
-			//ÒÆ¶¯ÖÕ¶Ëä¯ÀÀÆ÷°æ±¾ĞÅÏ¢
-            trident: u.indexOf('Trident') > -1, //IEÄÚºË
-            presto: u.indexOf('Presto') > -1, //operaÄÚºË
-            webKit: u.indexOf('AppleWebKit') > -1, //Æ»¹û¡¢¹È¸èÄÚºË
-            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //»ğºüÄÚºË
-            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //ÊÇ·ñÎªÒÆ¶¯ÖÕ¶Ë
-            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //iosÖÕ¶Ë
-            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //androidÖÕ¶Ë»òucä¯ÀÀÆ÷
-            iPhone: u.indexOf('iPhone') > -1, //ÊÇ·ñÎªiPhone»òÕßQQHDä¯ÀÀÆ÷
-            iPad: u.indexOf('iPad') > -1, //ÊÇ·ñiPad
-            webApp: u.indexOf('Safari') == -1 //ÊÇ·ñwebÓ¦¸Ã³ÌĞò£¬Ã»ÓĞÍ·²¿Óëµ×²¿
+			//ç§»åŠ¨ç»ˆç«¯æµè§ˆå™¨ç‰ˆæœ¬ä¿¡æ¯
+            trident: u.indexOf('Trident') > -1, //IEå†…æ ¸
+            presto: u.indexOf('Presto') > -1, //operaå†…æ ¸
+            webKit: u.indexOf('AppleWebKit') > -1, //è‹¹æœã€è°·æ­Œå†…æ ¸
+            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //ç«ç‹å†…æ ¸
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //æ˜¯å¦ä¸ºç§»åŠ¨ç»ˆç«¯
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //iosç»ˆç«¯
+            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //androidç»ˆç«¯æˆ–ucæµè§ˆå™¨
+            iPhone: u.indexOf('iPhone') > -1, //æ˜¯å¦ä¸ºiPhoneæˆ–è€…QQHDæµè§ˆå™¨
+            iPad: u.indexOf('iPad') > -1, //æ˜¯å¦iPad
+            webApp: u.indexOf('Safari') == -1 //æ˜¯å¦webåº”è¯¥ç¨‹åºï¼Œæ²¡æœ‰å¤´éƒ¨ä¸åº•éƒ¨
         };
     }(),
     language: (navigator.browserLanguage || navigator.language).toLowerCase()
