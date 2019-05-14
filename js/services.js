@@ -249,7 +249,9 @@ function show_m_guang(data) {
 		for(var i=0;i<items.length;i++) {
 			var item = items[i];
 
-			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" itemId=\""+item.numIid+"\" buyUrl=\""+item.buyUrl+"\" tpwd=\""+item.tpwd+"\" title=\""+item.title+"\" price=\""+item.finalPriceWap+"\" userType=\""+item.userType+"\" >"
+			var item_li = "<li class=\"wall_item\">"+"<a onclick=\"doBuy(this);\" itemId=\""+item.numIid
+				+"\" buyUrl=\""+item.buyUrl+"\" tpwd=\""+item.tpwd+"\" title=\""+item.title+"\" price=\""+item.finalPriceWap
+				+"\" userType=\""+item.userType+"\" coupon=\""+item.couponInfo+"\" >"
 				+"<div class=\"item_img\">"+"<img src=\""+item.pictUrl+"_250x250q90.jpg\" pic=\""+item.pictUrl+"\" alt=\""+item.title+"\" />"
 				+"</div><div class=\"item_title\">"+item.title+"</div>"+"<div class=\"item_info\">"
 				+"<span class=\"item_info_price\"><i>¥</i>"+item.finalPriceWap+"</span>"
@@ -300,8 +302,18 @@ function doBuy(a) {
 	var tpwd = $(a).attr("tpwd");
 	var title = $(a).attr("title");
 	var price = $(a).attr("price");
+	var coupon = $(a).attr("coupon");
+	var coupon_txt = "";
 	var userType = $(a).attr("userType");
 	var userType_txt = "";
+
+	if(coupon!=undefined && coupon!="")
+		coupon_txt = "(券)"
+
+	if(userType==0)
+		userType_txt = "淘宝";
+	else if(userType==1)
+		userType_txt = "天猫/淘宝";
 
 	var tpwd_dialog = new dialogLayer();
 	var tpwd_dgContent = tpwd_dialog.open("淘口令/二维码，快速淘好货！",250,330);
@@ -316,14 +328,8 @@ function doBuy(a) {
 		}
 	});
 	
-
-	if(userType==0)
-		userType_txt = "淘宝";
-	else if(userType==1)
-		userType_txt = "天猫/淘宝";
-
 	var tpwd_html = "<div class=\"tao_pwd\">"
-		+"<div class=\"tpwd_content\" clipboard=\"true\"><p>"+title+"</p><p>优惠价：<b>"+price+"</b>元</p><p style=\"color:#0099CC;\">淘口令：<span info=\"tpwd\">载入中...</span></p></div>"
+		+"<div class=\"tpwd_content\" clipboard=\"true\"><p>"+title+"</p><p>优惠价：<b>"+price+"</b>元"+coupon_txt+"</p><p style=\"color:#0099CC;\">淘口令：<span info=\"tpwd\">载入中...</span></p></div>"
 		+"<div class=\"item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=ffffff&el=l&w=200&m=5&text="+encodeURIComponent(buyUrl)+"\" style=\"width:160px;height:160px;\"/></div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
