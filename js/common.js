@@ -53,6 +53,7 @@ $(function() {
 	}
 	$("#browser_version").html("Browser["+current_browser+"]");
 });
+// 浏览器版本
 var current_browser = "PC", current_browser_platform = "PC";
 var browser = {
     versions: function () {
@@ -72,4 +73,30 @@ var browser = {
         };
     }(),
     language: (navigator.browserLanguage || navigator.language).toLowerCase()
+};
+
+// 获取浏览器地址栏参数
+function getQueryString(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null)
+		return unescape(r[2]);
+	return null;
+}
+// 获取日期（月-日）
+function dateMMdd(time) {
+	var tmp_date = new Date(time);
+	var td_mm = tmp_date.getMonth()+1;
+	var td_dd = tmp_date.getDate();
+	return td_mm+"-"+td_dd;
+}
+// 获取日期（年-月-日 时:分）
+function dateYmdhm(time) {
+	var tmp_date = new Date(time);
+	var td_yyyy = tmp_date.getFullYear();
+	var td_mm = tmp_date.getMonth()+1;
+	var td_dd = tmp_date.getDate();
+	var td_hh = tmp_date.getHours();
+	var td_ms = tmp_date.getMinutes();
+	return td_yyyy+"-"+td_mm+"-"+td_dd+" "+td_hh+":"+td_ms;
 }

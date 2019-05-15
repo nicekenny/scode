@@ -135,17 +135,8 @@ function load_m_guang() {
 		}
 	});
 }
-// 获取浏览器地址栏参数
-function getQueryString(name) {
-	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-	var r = window.location.search.substr(1).match(reg);
-	if (r != null)
-		return unescape(r[2]);
-	return null;
-}
 // Index回调函数
 function showIndex(data) {
-
 	var new_list = data.news;
 	var edit_list = data.edits;
 	if(new_list!=undefined) {
@@ -176,7 +167,6 @@ function showIndex(data) {
 }
 // Article回调函数
 function showArticle(data) {
-
 	var article = data.article;
 	if(article!=undefined) {
 		// var result = JSON.stringify(article.content);
@@ -192,7 +182,6 @@ function showArticle(data) {
 		
 		$("#article_content").html(article.content);
 
-		
 	}
 
 }
@@ -385,20 +374,3 @@ function doBuy(a) {
     });
 }
 
-// 获取日期（月-日）
-function dateMMdd(time) {
-	var tmp_date = new Date(time);
-	var td_mm = tmp_date.getMonth()+1;
-	var td_dd = tmp_date.getDate();
-	return td_mm+"-"+td_dd;
-}
-// 获取日期（年-月-日 时:分）
-function dateYmdhm(time) {
-	var tmp_date = new Date(time);
-	var td_yyyy = tmp_date.getFullYear();
-	var td_mm = tmp_date.getMonth()+1;
-	var td_dd = tmp_date.getDate();
-	var td_hh = tmp_date.getHours();
-	var td_ms = tmp_date.getMinutes();
-	return td_yyyy+"-"+td_mm+"-"+td_dd+" "+td_hh+":"+td_ms;
-}
