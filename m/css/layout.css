@@ -401,10 +401,10 @@ a:hover {
 .tao_pwd .tpwd_content .ti_title {
 	font-size: 14px;
 	line-height: 20px;
-	color: #999999;
+	color: #666666;
 	height: 40px;
 	overflow: hidden;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 .tao_pwd .item_qrcode {
 	height: 160px;
