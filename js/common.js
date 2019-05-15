@@ -83,6 +83,14 @@ function getQueryString(name) {
 		return unescape(r[2]);
 	return null;
 }
+// 获取浏览器地址栏静态参数（#锚）
+function getStaticParam(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	var r = window.location.hash.substr(1).match(reg);
+	if (r != null)
+		return unescape(r[2]);
+	return null;
+}
 // 获取日期（月-日）
 function dateMMdd(time) {
 	var tmp_date = new Date(time);
