@@ -406,6 +406,14 @@ a:hover {
 	overflow: hidden;
 	margin-bottom: 10px;
 }
+.tao_pwd .tpwd_content .ti_price {
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+	height: 20px;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
 .tao_pwd .item_qrcode {
 	height: 160px;
 	text-align: center;
