@@ -404,6 +404,7 @@ a:hover {
 	color: #999999;
 	height: 40px;
 	overflow: hidden;
+	margin-bottom: 5px;
 }
 .tao_pwd .item_qrcode {
 	height: 160px;
