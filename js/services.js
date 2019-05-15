@@ -309,8 +309,11 @@ function doBuy(a) {
 	var userType = $(a).attr("userType");
 	var userType_txt = "";
 
-	if(coupon!=undefined && coupon!="undefined" && coupon!="")
-		coupon_txt = "&nbsp;(券)"
+	var price_name = "折扣价：";
+	if(coupon!=undefined && coupon!="undefined" && coupon!="") {
+		coupon_txt = "&nbsp;(券)";
+		price_name = "优惠价：";
+	}
 
 	if(userType==0)
 		userType_txt = "淘宝";
@@ -331,7 +334,7 @@ function doBuy(a) {
 	});
 	
 	var tpwd_html = "<div class=\"tao_pwd\">"
-		+"<div class=\"tpwd_content\" clipboard=\"true\"><p>"+title+"</p><p>优惠价：<b>"+price+"</b>元"+coupon_txt+"</p><p style=\"color:#0099CC;\">淘口令：<span info=\"tpwd\">载入中...</span></p></div>"
+		+"<div class=\"tpwd_content\" clipboard=\"true\"><p>"+title+"</p><p>"+price_name+"<b>"+price+"</b>元"+coupon_txt+"</p><p style=\"color:#0099CC;\">淘口令：<span info=\"tpwd\">载入中...</span></p></div>"
 		+"<div class=\"item_qrcode\" style=\"display:none;\"><img src=\"http://qr.liantu.com/api.php?bg=ffffff&el=l&w=200&m=5&text="+encodeURIComponent(buyUrl)+"\" style=\"width:160px;height:160px;\"/></div>"
 		+"<div class=\"tpwd_info\">复制淘口令，打开"+userType_txt+"APP购买</div>"
 		+"<div class=\"tpwd_links\">"
