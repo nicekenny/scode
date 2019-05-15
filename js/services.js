@@ -196,7 +196,7 @@ function showGoods(data) {
 		for(var i=0;i<items.length;i++) {
 			var item = items[i];
 			
-			var item_coupon = "";
+			var item_coupon = "<div class=\"coupon\"></div>";
 			if(item.couponInfo!=undefined) {
 				item_coupon = "<div class=\"coupon\"><span class=\"cp_title\">"+item.couponInfo+"</span><a href=\""+item.couponClickUrl+"\" target=\"_blank\" class=\"cp_link\">去领券</a></div>";
 			}
