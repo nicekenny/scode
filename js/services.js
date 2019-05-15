@@ -296,7 +296,7 @@ function doBuy(a) {
 	var userType = $(a).attr("userType");
 	var userType_txt = "";
 
-	if(coupon!=undefined && coupon!="")
+	if(coupon!=undefined && coupon!="undefined" && coupon!="")
 		coupon_txt = "&nbsp;(券)"
 
 	if(userType==0)
