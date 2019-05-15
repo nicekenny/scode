@@ -398,6 +398,13 @@ a:hover {
 	-webkit-appearance: none;
 	-webkit-user-select: text;
 }
+.tao_pwd .tpwd_content .ti_title {
+	font-size: 14px;
+	line-height: 20px;
+	color: #999999;
+	height: 40px;
+	overflow: hidden;
+}
 .tao_pwd .item_qrcode {
 	height: 160px;
 	text-align: center;
