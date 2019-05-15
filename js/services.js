@@ -352,7 +352,7 @@ function doBuy(a) {
 	if(current_browser=="WeiXin") {
 		$(tpwd_dgContent).find(".tpwd_buylink").removeAttr("href");
 		$(tpwd_dgContent).find(".tpwd_buylink").click(function() {
-			$(tpwd_dgContent).find(".tpwd_info").html("<span style=\"color:#FF0088;\">请复制淘口令</span>，打开"+userType_txt+"APP购买");
+			$(tpwd_dgContent).find(".tpwd_info").html("<span style=\"color:#FF6570;\">请复制淘口令</span>，打开"+userType_txt+"APP购买");
 		});
 	}
 	// 设置窗口背景图片
@@ -366,7 +366,7 @@ function doBuy(a) {
     });
     clipboard.on("success", function(e) {
         // 拷贝成功
-		$(tpwd_dgContent).find(".tpwd_info").html("<span style=\"color:#FF0088;\">淘口令已复制</span>，打开"+userType_txt+"APP购买");
+		$(tpwd_dgContent).find(".tpwd_info").html("<span style=\"color:#FF6570;\">淘口令已复制</span>，打开"+userType_txt+"APP购买");
 		$(tpwd_dgContent).find(".tpwd_content").css("border", "1px dashed #66CC33").css("background-color", "#f7fff1");
     });
     clipboard.on("error", function(e) {
