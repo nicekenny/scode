@@ -233,6 +233,11 @@ function show_m_guang(data) {
 		$(document).attr("title", current_category + " - 逛街啦");
 	}
 	$("#wall_loading").hide();
+	if(page_no==1) {
+		$("#welcome_box").hide();
+		$("#head_box").show();
+		$("#product_walls").show();
+	}
 	var items = data.items;
 	if(items!=undefined) {
 		for(var i=0;i<items.length;i++) {

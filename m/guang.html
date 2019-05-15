@@ -26,31 +26,34 @@
 
 	<div class="screen_wrap">
     
-    	<div class="head_bar">
+    	<div id="head_box" class="head_bar" style="display: none;">
             <div class="hb_center">
               <a href="m/guang.html" scl="scode" class="hb_title">～逛一逛～</a>
             </div>
         </div>
     	
-  <div class="category_childs_box">
+		<div class="category_childs_box">
         	<ul id="category_list" class="cc_root_box clearfix">
-            	<!--<li><a href="">全部</a></li><li class="current"><a href="">上衣</a></li>-->
-    </ul>
-        </div>
-
-  		<div id="product_walls" class="product_box clearfix">
+            	<!-- Categorys -->
+			</ul>
+		</div>
+		<!-- Products -->
+  		<div id="product_walls" class="product_box clearfix" style="display: none;">
 			<ul class="wall_wrap"></ul>
 			<ul class="wall_wrap"></ul>
 		</div>
         <div id="wall_loading" class="wall_loading" style="display: none;">
 			<img src="images/loading_icon.gif"/>
-			Loading......
+            <span>正在载入......</span>
 		</div>
 		<div class="warning_box" style="display: none;">
-			<h2>抱歉，无商品！</h2>
-			<p>很抱歉，系统未找到相关商品信息。</p>
+			<h2>抱歉，没货了！</h2>
+			<p>非常抱歉，好货可能被抢购一空了，请稍后再来。</p>
 		</div>
-        
+        <div id="welcome_box" class="welcome_box">
+        	<div class="wb_logo">逛街啦～淘好货</div>
+            <div class="wb_info">带你用最优惠的价格淘到自己喜欢的宝贝！</div>
+        </div>
     </div>
 
 	<div class="footer">
@@ -66,19 +69,5 @@
 		<a class="back_top" href="javascript:void(0);">回到顶部</a>
 	</div>
 
-	<!--弹窗口
-    <div class="tao_pwd">
-    	<div class="tpwd_content">淘口令:￥CbBCYcxpASb￥</div>
-        <div class="tpwd_info">复制淘口令，打开淘宝APP购买</div>
-        <div class="tpwd_links">
-        	<a href="" class="tpwd_buylink">直达连接</a>
-            <a href="" class="tpwd_qrcode">二维码</a>
-            <a href="" class="tpwd_close">再逛逛</a>
-        </div>
-    </div>
-    -->
-    <!-- mask 
-	<div id="m_ui_mask" class="ui_mask" style="display: none;"></div>
-	-->
 </body>
 </html>
