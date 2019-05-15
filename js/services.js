@@ -234,12 +234,14 @@ function show_m_guang(data) {
 	}
 	$("#wall_loading").hide();
 	if(page_no==1) {
-		$("#welcome_box").hide();
 		$("#head_box").show();
-		$("#product_walls").show();
 	}
 	var items = data.items;
-	if(items!=undefined) {
+	if(items!=undefined && items.length>0) {
+		if(page_no==1) {
+			$("#product_walls").show();
+			$("#welcome_box").hide();
+		}
 		for(var i=0;i<items.length;i++) {
 			var item = items[i];
 
@@ -253,7 +255,6 @@ function show_m_guang(data) {
 				+"<span class=\"item_info_likes\">"+item.volume+"</span>"
 				//+"<span class=\"item_info_provcity\">"+item.provcity+"</span>"
 				+"</div></a></li>";
-
 
 			var pw_h_max = $("#product_walls").height();
 			var pw_min;
@@ -269,6 +270,8 @@ function show_m_guang(data) {
 		// 全局页码翻页
 		page_no = page_no + 1;
 		loaded = true;
+	} else if(page_no==1) {
+		$("#warning_box").show();
 	}
 	if(current_page_no<=1) {
 		var categorys = data.categorys;
