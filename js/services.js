@@ -12,6 +12,8 @@ var basepath = "https://scode.org.cn/";
 var serv_basepath = "http://x.scode.org.cn:81/";
 // serv_basepath = "http://localhost/scodelab/";
 serv_basepath = "https://x.scode.org.cn:444/";
+// 定义AppCode
+var base_app_code = "scode";
 // 初始化页码
 var page_no = 1,current_page_no = 0,loaded = true;
 
@@ -106,7 +108,7 @@ function loadGoods() {
 
 	var categoryId = getQueryString("cate");
 	$.ajax({
-		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId+"&page="+page_no,
+		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId+"&page="+page_no+"&app="+base_app_code,
 		type: 'GET',
 		dataType: "jsonp",
 		jsonpCallback: "showGoods",
@@ -126,7 +128,7 @@ function load_m_guang() {
 	$("#wall_loading").show();
 	var categoryId = getQueryString("cate");
 	$.ajax({
-		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId+"&page="+page_no,
+		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId+"&page="+page_no+"&app="+base_app_code,
 		type: 'GET',
 		dataType: "jsonp",
 		jsonpCallback: "show_m_guang",
@@ -325,7 +327,7 @@ function doBuy(a) {
 
 	// 调用接口，获取淘口令
 	$.ajax({
-		url: serv_basepath + "taobao/item/ajaxItemTpwd.html?id="+itemId+"&url="+encodeURIComponent(buyUrl),
+		url: serv_basepath + "taobao/item/ajaxItemTpwd.html?id="+itemId+"&url="+encodeURIComponent(buyUrl)+"&app="+base_app_code,
 		type: 'GET',
 		dataType: "jsonp",
 		success: function (data) {
