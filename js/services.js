@@ -108,7 +108,7 @@ function loadGoods() {
 
 	var categoryId = getQueryString("cate");
 	$.ajax({
-		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId+"&page="+page_no+"&app="+base_app_code,
+		url: serv_basepath + "guang/item/ajaxItems.html?cate="+categoryId+"&page="+page_no+"&app="+base_app_code,
 		type: 'GET',
 		dataType: "jsonp",
 		jsonpCallback: "showGoods",
@@ -128,7 +128,7 @@ function load_m_guang() {
 	$("#wall_loading").show();
 	var categoryId = getQueryString("cate");
 	$.ajax({
-		url: serv_basepath + "taobao/item/ajaxItems.html?cate="+categoryId+"&page="+page_no+"&app="+base_app_code,
+		url: serv_basepath + "guang/item/ajaxItems.html?cate="+categoryId+"&page="+page_no+"&app="+base_app_code,
 		type: 'GET',
 		dataType: "jsonp",
 		jsonpCallback: "show_m_guang",
@@ -327,7 +327,7 @@ function doBuy(a) {
 
 	// 调用接口，获取淘口令
 	$.ajax({
-		url: serv_basepath + "taobao/item/ajaxItemTpwd.html?id="+itemId+"&url="+encodeURIComponent(buyUrl)+"&app="+base_app_code,
+		url: serv_basepath + "guang/item/ajaxItemTpwd.html?id="+itemId+"&url="+encodeURIComponent(buyUrl)+"&app="+base_app_code,
 		type: 'GET',
 		dataType: "jsonp",
 		success: function (data) {
