@@ -12,8 +12,7 @@ var basepath = "https://scode.org.cn/";
 var serv_basepath = "http://x.scode.org.cn:81/";
 // serv_basepath = "http://localhost/scodelab/";
 serv_basepath = "https://x.scode.org.cn:444/";
-// 定义AppCode
-var base_app_code = "scode";
+
 // 初始化页码
 var page_no = 1,current_page_no = 0,loaded = true;
 
