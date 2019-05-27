@@ -72,7 +72,7 @@ function loadItems() {
 	current_page_no = page_no;
 	// 设置加载中
 	loaded = false;
-
+	var load_url;
 	if(param_gss!=undefined && param_gss!="") {
 		if(param_gss=="search") {
 			// 搜索载入
@@ -189,7 +189,7 @@ function loadGuangMenus() {
 				var menu_html = "";
 				for(var m=0;m<data.menus.length;m++) {
 					var menu_item = data.menus[m];
-					var mi_href = "?"+property_gss+"=material";
+					var mi_href = "goods.html?"+property_gss+"=material";
 					if(menu_item.keyword!=undefined && $.trim(menu_item.keyword)!=""){
 						mi_href = mi_href + "&q="+encodeURI(menu_item.keyword);
 					}
@@ -202,11 +202,7 @@ function loadGuangMenus() {
 					if(menu_item.other!=undefined && $.trim(menu_item.other)!=""){
 						mi_href = mi_href + menu_item.other;
 					}
-					var mi_icon_css = "";
-					if(menu_item.code!=undefined && $.trim(menu_item.code)!=""){
-						mi_icon_css = " class=\"ct-icon ct-i-"+menu_item.code+"\"";
-					}
-					menu_html = menu_html + "<li><a href=\""+scodeUrl(encodeURI(mi_href))+"\"><i"+mi_icon_css+"></i>"+menu_item.title+"</a></li>";
+					menu_html = menu_html + "<a href=\""+scodeUrl(encodeURI(mi_href))+"\">"+menu_item.title+"</a>";
 				}
 				$("#guang_menus").empty().append(menu_html);
 			}
