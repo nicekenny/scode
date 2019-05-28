@@ -127,11 +127,11 @@ function showItems(data) {
 			
 			var item_coupon = "<div class=\"coupon\"></div>";
 			if(item.couponInfo!=undefined) {
-				item_coupon = "<div class=\"coupon\"><span class=\"cp_title\">"+item.couponInfo+"</span><a href=\""+item.couponClickUrl+"\" target=\"_blank\" class=\"cp_link\">去领券</a></div>";
+				item_coupon = "<div class=\"coupon\"><span class=\"cp_title\">"+item.couponInfo+"</span><a href=\""+item.buyUrl+"\" target=\"_blank\" class=\"cp_link\">去领券</a></div>";
 			}
 
-			var item_li = "<li class=\"cgi\"><a href=\""+item.buyUrl+"\" target=\"_blank\" class=\"img_square\"><img src=\""+item.pictUrl+"_250x250q90.jpg\"></a>"
-				+"<p class=\"title\"><a href=\""+item.clickUrl+"\" target=\"_blank\">"+item.title+"</a></p>"
+			var item_li = "<li class=\"cgi\"><a href=\""+item.buyUrl+"\" target=\"_blank\" class=\"img_square\"><img src=\""+item.pictUrl+"_250x250q90.jpg\" onload=\"imgLoaded(this)\" /></a>"
+				+"<p class=\"title\"><a href=\""+item.buyUrl+"\" target=\"_blank\">"+item.title+"</a></p>"
 				+item_coupon
 				+"<div class=\"goods_info\"><b class=\"price_info\"><i>￥</i>"+item.finalPrice+"</b><span class=\"fav_num\">"+item.volume+"</span></div></li>";
 
@@ -171,14 +171,19 @@ function showItems(data) {
 			if(query!=undefined) {
 				$(document).attr("title", query.keyword + " - Shopping - scode.org.cn");
 				// -----------------
+				$("#category_list").hide();
 			}
 		}
 	}
 	
 }
-
+// 图片加载完后调用
+function imgLoaded(img) {
+	$(img).parent().css("background-image","none");
+}
 // 加载系统配置：逛街啦-菜单项目
 function loadGuangMenus() {
+	var param_materialId = getQueryString("material_id");
 	// 调用接口，获取菜单项
 	$.ajax({
 		url: serverUrl("guang/base/menuItems.html"),
@@ -202,7 +207,10 @@ function loadGuangMenus() {
 					if(menu_item.other!=undefined && $.trim(menu_item.other)!=""){
 						mi_href = mi_href + menu_item.other;
 					}
-					menu_html = menu_html + "<a href=\""+scodeUrl(encodeURI(mi_href))+"\">"+menu_item.title+"</a>";
+					var current_li = "";
+					if(param_materialId==menu_item.materialId)
+						current_li = " class=\"current\"";
+					menu_html = menu_html + "<li"+current_li+"><a href=\""+scodeUrl(encodeURI(mi_href))+"\">"+menu_item.title+"</a></li>";
 				}
 				$("#guang_menus").empty().append(menu_html);
 			}

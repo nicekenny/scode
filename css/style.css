@@ -261,3 +261,36 @@
 	color: #FFFFFF;
 	background-color: #333333;
 }
+.menus_box {
+	background-color: #FFFFFF;
+	padding-top: 2px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 2px;
+	margin-bottom: 20px;
+	border: 1px dashed #EEEEEE;
+}
+.menus_box li {
+	float: left;
+	width: 193px;
+	background-color: #F5F5F5;
+	height: 40px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	overflow: hidden;
+}
+.menus_box li.current {
+	background-color: #EFEFEF;
+}
+.menus_box li a {
+	font-size: 14px;
+	line-height: 40px;
+	display: block;
+	color: #333333;
+	text-align: center;
+	font-weight: 500;
+}
+.menus_box li a:hover {
+	color: #CC0000;
+	background-color: #F9F9F9;
+}
