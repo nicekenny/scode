@@ -11,7 +11,7 @@ $(function() {
 	if($(window).scrollTop()<=10)
 		$(".fixed_box .back_top").hide();
 	$(".fixed_box .back_top").click(function() {
-		$(window).scrollTop(0);
+		$("body,html").animate({ scrollTop: 0 }, 800);
 	});
 	$(window).scroll(function() {
 		var window_top = $(window).scrollTop();
@@ -80,7 +80,7 @@ function getQueryString(name) {
 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
 	var r = window.location.search.substr(1).match(reg);
 	if (r != null)
-		return unescape(r[2]);
+		return decodeURI(r[2]);
 	return null;
 }
 // 获取浏览器地址栏静态参数（#锚）
@@ -88,7 +88,7 @@ function getStaticParam(name) {
 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
 	var r = window.location.hash.substr(1).match(reg);
 	if (r != null)
-		return unescape(r[2]);
+		return decodeURI(r[2]);
 	return null;
 }
 /* 
