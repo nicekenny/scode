@@ -50,7 +50,9 @@
 	padding-left: 30px;
 	background-color: #F8F8F8;
 }
-
+.articles-more a:hover {
+	background-color: #EEEEEE;
+}
 .content-sider {
 	position: relative;
 	width: 200px;
