@@ -5,18 +5,19 @@
 <title>Source Code - Scode.org.cn</title>
 <meta name="keywords" content="Source Code Laboratory">
 <meta name="description" content="Source Code Laboratory">
+<meta property="wb:webmaster" content="3bdb0943422b72fa" />
+
 <link rel="shortcut icon" href="images/favicon_16.ico" />
 <link rel="icon" type="image/gif" href="images/favicon_16.ico" />
 
 <link href="css/layout.css" rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<link href="css/article.css" rel="stylesheet" type="text/css" />
-<link href="css/content.css" rel="stylesheet" type="text/css" />
+<link href="css/category.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="js/jquery-min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="js/services.js"></script>
-<script type="text/javascript" src="js/article-function.js"></script>
+<script type="text/javascript" src="js/category-function.js"></script>
 </head>
 
 <body>
@@ -36,9 +37,8 @@
                     <em class="right-angle"></em><br />
                 </h1>
 				<nav class="nav-items">
-                	<ul>
+                	<ul id="base_navs">
                     	<li><a href="" scl="scode"><span>首页</span></a></li>
-						<li class="current"><a href="#"><span>文章</span></a></li>
                     </ul>
                     <ul id="root_categorys">
                     	<!-- rootCategorys -->
@@ -55,27 +55,30 @@
 	</div>
     <div class="panel">
     	<div class="wrapper">
-        	<!-- 顶部广告图
-        	<div class="adver-panel">
-            	<div class="adver-box">
-                	<img src="images/article-bg.jpg" width="980" />
-                </div>
-            </div>
-            -->
-        	<div class="content-main">
-            	<!--content begin-->
-                <div class="c_title">
-                	<h1 id="article_title" class="title_h1"><!--This is a title.--></h1>
-                    <div class="title_info">
-                    	<span id="article_author"><!--Author--></span>
-                        <em>&nbsp;|&nbsp;</em>
-                        <span id="article_time"><!--2019-01-01 00:00--></span>
+        	<div class="content-main clearfix">
+            	<div class="content-sider">
+                	<div class="sider-title">文章目录</div>
+                	<div id="category_list" class="cagetorys-box">
+                    	<!--category-List-->
+                    </div>
+                    <div class="sider-title">最近搜索</div>
+                	<div id="search_keyword_list" class="cagetorys-box">
+                    	<!--search-keyword-List-->
                     </div>
                 </div>
-                <div id="article_content" class="content_text"><!--This is the content of an article.--></div>
-                <!--content end-->
-            </div>
-        </div>
+                <div class="content-list">
+                	<div id="article_list" class="articles-box">
+                      <div class="articles-empty">
+                            稍等，正在载入文章列表...
+                      </div>
+                    </div>
+                    <div class="articles-more">
+                   	  <a href="javascript:loadArticles();">～加载更多～</a>
+                    </div>
+                </div>
+                
+          </div>
+      </div>
     </div>
     <div id="body_footer" class="footer">
     	<!-- footer-html -->
