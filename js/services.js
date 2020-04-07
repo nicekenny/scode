@@ -50,7 +50,7 @@ $(function() {
 			topLink_url = serv_basepath + topLink_url;
 		var topLink_target = "";
 		if(topLink.target!=undefined)
-			topLink_target = "target=\""+topLink_target+"\"";
+			topLink_target = "target=\""+topLink.target+"\"";
 		topLinks_UL.append("<li><a href=\""+topLink_url+"\" "+topLink_target+">"+topLink.name+"</a></li>");
 	}
 	// 初始化底部
