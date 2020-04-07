@@ -16,7 +16,7 @@ var serv_basepath = "http://x.scode.org.cn:81/";
 
 var topLinks = [{scl:"scode",url:"index.html",name:"源代码"},
 				{scl:"x_scode",url:"",name:"实验室"},
-				{url:"https://guang.scode.org.cn/?gss=&app=guang",name:"逛街啦"}];
+				{url:"https://guang.scode.org.cn/?gss=&app=guang",name:"逛街啦",target:"_blank"}];
 
 // 页面数据初始化
 $(function() {
@@ -48,7 +48,10 @@ $(function() {
 			topLink_url = basepath + topLink_url;
 		else if(topLink.scl=="x_scode")
 			topLink_url = serv_basepath + topLink_url;
-		topLinks_UL.append("<li><a href=\""+topLink_url+"\">"+topLink.name+"</a></li>");
+		var topLink_target = "";
+		if(topLink.target!=undefined)
+			topLink_target = "target=\""+topLink_target+"\"";
+		topLinks_UL.append("<li><a href=\""+topLink_url+"\" "+topLink_target+">"+topLink.name+"</a></li>");
 	}
 	// 初始化底部
 	initFooter();
