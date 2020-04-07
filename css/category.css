@@ -3,6 +3,7 @@
 	margin-right: 230px;
 	background-color: #FFFFFF;
 	min-height: 300px;
+	overflow: hidden;
 }
 .articles-box {
 	padding: 0px;
