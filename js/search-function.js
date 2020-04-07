@@ -19,6 +19,7 @@ $(function() {
 		// 获取全局执行变量
 		global_keyword = getQueryString("keyword");
 		if(global_keyword!=undefined && $.trim(global_keyword).length>0) {
+			$(document).attr("title",global_keyword + " - Search - scode.org.cn");
 			$("#search_keyword").text(global_keyword);
 			// 添加cookies
 			var kwds = getCookie("searchKeywords");

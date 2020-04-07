@@ -68,6 +68,7 @@ function appendCategorys(list) {
 			var _class = "";
 			if(_item.id==global_cate) {
 				_class = "current";
+				$(document).attr("title",_item.name + " - Category - scode.org.cn");
 			}
 			var categoryHtml = "<div class=\"category-item "+_class+"\"><a href=\""+categoryUrl+"\">"+_item.name+"<em>("+_item.count+")</em></a></div>";
 			categorys.append(categoryHtml);

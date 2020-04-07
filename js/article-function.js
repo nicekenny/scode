@@ -41,12 +41,14 @@ function showArticle(data) {
 	if(article!=undefined) {
 		// var result = JSON.stringify(article.content);
 		// html - title
-		$(document).attr("title",article.title + " - scode.org.cn");
+		$(document).attr("title",article.title + " - Article - scode.org.cn");
 		$("meta[name='keywords']").eq(0).attr("content",article.keywords);
 		$("meta[name='description']").eq(0).attr("content",article.description);
 
 		$("#article_title").html(article.title);
-		
+		if(article.category!=undefined) {
+			$("#article_category").html(article.category.name);
+		}
 		$("#article_author").html(data.author);
 		$("#article_time").html(dateYmdhm(article.createTime));
 		
