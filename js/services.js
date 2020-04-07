@@ -106,8 +106,10 @@ function showRootCategorys(data) {
 		for(var i=0;i<roots.length;i++) {
 			var item = roots[i];
 			var _class = "";
-			if(item.code==_code)
+			if(item.code==_code) {
 				_class = "class=\"current\"";
+				$(document).attr("title", item.name + " - Category - scode.org.cn");
+			}
 			var cateHtml = "<li "+_class+"><a href=\"category.html?code="+item.code+"\"><span>"+item.name+"</span></a></li>";
 			rootCates.append(cateHtml);
 		}
