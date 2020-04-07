@@ -15,7 +15,8 @@ var serv_basepath = "http://x.scode.org.cn:81/";
 // serv_basepath = "http://127.0.0.1/scodelab/";
 
 var topLinks = [{scl:"scode",url:"index.html",name:"源代码"},
-				{scl:"x_scode",url:"",name:"实验室"}];
+				{scl:"x_scode",url:"",name:"实验室"},
+				{url:"https://guang.scode.org.cn/?gss=&app=guang",name:"逛街啦"}];
 
 // 页面数据初始化
 $(function() {
