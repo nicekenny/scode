@@ -1,0 +1,134 @@
+@charset "utf-8";
+.content-list {
+	margin-right: 230px;
+	background-color: #FFFFFF;
+	min-height: 300px;
+	overflow: hidden;
+}
+.articles-box {
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 30px;
+	margin-left: 0px;
+}
+.articles-empty {
+	font-size: 20px;
+	line-height: 50px;
+	color: #999999;
+	text-align: center;
+}
+
+.articles-box .article-item {
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 30px;
+	margin-left: 0px;
+}
+.article-item .article-title {
+	margin-bottom: 10px;
+}
+.article-item .article-title a {
+	font-size: 20px;
+	line-height: 40px;
+	font-weight: 500;
+}
+.article-item .article-desc {
+	font-size: 14px;
+	line-height: 26px;
+	color: #666666;
+}
+.articles-more {
+	text-align: center;
+	margin-top: 10px;
+}
+.articles-more a {
+	font-size: 14px;
+	line-height: 35px;
+	display: inline-block;
+	padding-right: 30px;
+	padding-left: 30px;
+	background-color: #F8F8F8;
+}
+.articles-more a:hover {
+	background-color: #EEEEEE;
+}
+.content-sider {
+	position: relative;
+	width: 200px;
+	top: 0px;
+	right: 0px;
+	float: right;
+}
+.content-sider .sider-title {
+	font-size: 14px;
+	line-height: 30px;
+	font-weight: 500;
+	margin-bottom: 10px;
+	background-color: #EFEFEF;
+	padding-right: 15px;
+	padding-left: 15px;
+	border-radius: 5px;
+	position: relative;
+}
+.content-sider .sider-title .search_clean_icon {
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	top: 0px;
+	right: 0px;
+	color: #666666;
+	cursor: pointer;
+}
+.content-sider .sider-blank {
+	height: 60px;
+}
+
+
+.cagetorys-box {
+	margin-left: 3px;
+	margin-bottom: 20px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #E8E8E8;
+	padding-left: 0px;
+}
+.cagetorys-box .category-item {
+	padding-left: 23px;
+	background-image: url(images/li_icon.gif);
+	background-repeat: no-repeat;
+	background-position: 10px 12px;
+	line-height: 30px;
+	border-radius: 0px 5px 5px 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.cagetorys-box .category-item a {
+	font-size: 14px;
+	line-height: 20px;
+}
+.cagetorys-box .category-item em {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+	color: #999999;
+	margin-left: 5px;
+}
+.cagetorys-box .current {
+	background-color: #F8F8F8;
+}
+.cagetorys-box .current a {
+	color: #19a4fc;
+	font-weight: 500;
+}
+.location {
+	margin-bottom: 20px;
+	font-size: 18px;
+	line-height: 45px;
+	font-weight: 500;
+	color: #333333;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #EEEEEE;
+}

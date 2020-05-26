@@ -11,11 +11,14 @@
 <link rel="icon" type="image/gif" href="images/favicon_16.ico" />
 
 <link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/font_icon.css" rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/category.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="js/jquery-min.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="js/services.js"></script>
+<script type="text/javascript" src="js/search-function.js"></script>
 </head>
 
 <body>
@@ -35,8 +38,9 @@
                     <em class="right-angle"></em><br />
                 </h1>
 				<nav class="nav-items">
-                	<ul>
-                    	<li class="current"><a href="" scl="scode"><span>首页</span></a></li>
+                	<ul id="base_navs">
+                    	<li><a href="" scl="scode"><span>首页</span></a></li>
+                        <li class="current"><a href="#"><span>搜索</span></a></li>
                     </ul>
                     <ul id="root_categorys">
                     	<!-- rootCategorys -->
@@ -53,47 +57,28 @@
 	</div>
     <div class="panel">
     	<div class="wrapper">
-        	<div class="panel-top"><!--top--></div>
-        	<div class="adver-panel">
-            	<div class="adver-box">
-                	<img src="images/code-bg.jpg" />
-                </div>
-            </div>
         	<div class="content-main clearfix">
-            	<!--Right-->
-            	<div class="content-right">
-                	<div class="article-box">
-                    	<h2>热门文章</h2>
-                        <div class="item-list">
-                        	<ul id="edit_list">
-                                <!--<li><a href="article.html?id=1" target="_blank">test</a><em>00-00</em></li>-->
-                          	</ul>
-                        </div>
+            	 <div class="content-sider">
+                    <div class="sider-title">最近搜索<div class="font_icon search_clean_icon"></div></div>
+           	  		<div id="search_keyword_list" class="cagetorys-box">
+                    	<!--search-keyword-List-->
+                  	</div>
+                </div>
+                <div class="content-list">
+                	<div class="location">
+                    	搜索：<span id="search_keyword"></span>
+                    </div>
+           	    	<div id="article_list" class="articles-box">
+                      <div class="articles-empty">
+                            稍等，正在载入文章列表...
+                      </div>
+                    </div>
+                    <div class="articles-more">
+                    	<a href="javascript:loadArticles();">～加载更多～</a>
                     </div>
                 </div>
-                <!--Left-->
-                <div class="content-left">
-                    <div class="article-box">
-                    	<h2>最新发布文章</h2>
-                        <div class="item-wrap">
-                            <div class="item-list">
-                                <ul id="new_list_left">
-                                    <!--<li><a href="article.html?id=1" target="_blank">test</a><em>00-00</em></li>-->
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item-wrap">
-                            <div class="item-list">
-                                <ul id="new_list_right">
-                                    <!--<li><a href="article.html?id=1" target="_blank">test</a><em>00-00</em></li>-->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Content-->
-            </div>
-        </div>
+          </div>
+      </div>
     </div>
     <div id="body_footer" class="footer">
     	<!-- footer-html -->

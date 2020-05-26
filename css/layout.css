@@ -27,13 +27,13 @@ ul,li {
 a {
 	font-size: 12px;
 	line-height: 20px;
-	color: #3f6289;
+	color: #333333;
 	text-decoration: none;
 	cursor: pointer;
 	outline: none;
 }
 a:hover {
-	color: #13a4fe;
+	color: #CC0033;
 	/*text-decoration: none;*/
 }
 .clearfix {
@@ -54,8 +54,8 @@ a:hover {
 	background-color: #FFFFFF;
 }
 .wrapper  {
-	width: 980px;
-	min-width: 980px;
+	max-width: 980px;
+	min-width: 650px;
 	margin-top: 0px;
 	margin-right: auto;
 	margin-bottom: 0px;
@@ -145,11 +145,15 @@ a:hover {
 	width: auto;
 	background-color: #EEEEEE;
 }
+.nav-items ul {
+	display: inline-block;
+}
+
 .nav-items li {
-	float: left;
 	margin: 0px;
 	padding: 0px;
 	height: 40px;
+	display: inline-block;
 }
 .nav-items li a {
 	display: block;
@@ -163,7 +167,7 @@ a:hover {
 }
 .nav-items li a:hover {
 	color: #333333;
-	background-color: #E9E9E9;
+	background-color: #E3E3E3;
 }
 .nav-items  li.current a {
 	padding-right: 15px;
